@@ -4,24 +4,108 @@
   <meta charset="UTF-8">
   <title>Web Development Tutorial</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="homepage.css">
+  <script src="main.js"></script>
   <script src="https://kit.fontawesome.com/33813b83ba.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Web Development Tutorial</h1>
-    <nav>
-      <ul>
-        <li><span class='icon'></span></li>
-        <li><a href="homepage.html"><i class="fa-solid fa-house"></i></a></li>
-        <li><a href="html_course.html">HTML</a></li>
-        <li><a href="css_course.html">CSS</a></li>
-        <li><a href="javascript_course.html">JavaScript</a></li>
-      </ul>
-    </nav>
+    <div id="logo_container"><img src="Logo.jpg" alt=""></div>
+    <div class="topnav" id="myTopnav">
+        <div class="dropdown">
+          <button class="dropbtn">Tutorials 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+           
+            <div style="width: fit-content;background-color: blueviolet;align-self: center;width: 75%;">
+              <div>
+                  <h1>Tutorial</h1>
+
+              </div>
+              <div style="display: flex;flex-direction: row;">
+                  <div style="flex: 33%;">
+                      <h3>HTML</h3>
+                      <a href="html_course.html#intro">HTML Introduction</a>
+                      <a href="html_course.html#basics">HTML Basics</a>
+                      <a href="html_course.html#attribures">HTML Attributes</a>
+                      <a href="html_course.html#headings">HTML Headings</a>
+                      <a href="html_course.html#ids">HTML Ids</a>
+                      <a href="html_course.html#classes">HTML Classes</a>
+                      <a href="html_course.html#paragraphs">HTML Paragraphs</a>
+                  </div>
+                  <div style="flex: 33%;">
+                      <h3>CSS</h3>
+                      <a href="css_course.html#syntax">CSS Syntax</a>
+                      <a href="css_course.html#colors">CSS Colors</a>
+                      <a href="css_course.html#backgrounds">CSS Backgrounds</a>
+                      <a href="css_course.html#borders">CSS Borders</a>
+                      <a href="css_course.html#margins">CSS Margins</a>
+                      <a href="css_course.html#texts">CSS Text</a>
+                      <a href="css_course.html#fonts">CSS Fonts</a>
+                      <a href="css_course.html#displays">CSS Display</a>
+                      <a href="css_course.html#aligns">CSS Align</a>
+                  </div>
+                  <div style="flex: 33%;">
+                      <h3>JavaScript</h3>
+                      <a href="javascript_course.html#intro">JS Introduction</a>
+                      <a href="javascript_course.html#statements">JS Statements</a>
+                      <a href="javascript_course.html#syntax">JS Syntax</a>
+                      <a href="javascript_course.html#variables">JS Variables</a>
+                      <a href="javascript_course.html#lets">JS LET</a>
+                      <a href="javascript_course.html#constants">JS CONST</a>
+                  </div>
+              </div>
+              </div>
+     
+          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Exercises 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <div style="width: fit-content;background-color: blueviolet;align-self: center;width: 75%;">
+                <div>
+                    <h1>Tutorial</h1>
+
+                </div>
+                <div style="display: flex;flex-direction: row;">
+                    <div style="flex: 33%;">
+                        <h3>HTML</h3>
+                        <a href="#">HTML</a>
+                        <a href="#">HTML</a>
+                        <a href="#">HTML</a>
+                        <a href="#">HTML</a>
+                    </div>
+                    <div style="flex: 33%;">
+                        <h3>CSS</h3>
+                        <a href="#">CSS</a>
+                        <a href="#">CSS</a>
+                        <a href="#">CSS</a>
+                        <a href="#">CSS</a>
+                        <a href="#">CSS</a>
+                    </div>
+                    <div style="flex: 33%;">
+                        <h3>JavaScript</h3>
+                        <a href="#">JavaScript</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">JavaScript</a>
+                    </div>
+                </div>
+                </div>
+              
+            </div>
+          </div>
+          <a href="homepage.html">About</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
   </header>
   
   <main>
-    <section id="html">
+    <section id="intro">
       <h2>HTML Tutorial</h2>
       <article>
         <h3>Topic 1</h3>
