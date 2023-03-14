@@ -1,7 +1,9 @@
 body {
   margin:0;
-  font-family:Arial;
-  background-color:#D9EEE1}
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:#D9EEE1;
+}
+  
 
 #logo_container {
     padding-top: 1%;
@@ -93,11 +95,24 @@ body {
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #808898;
+  background-color: #8E9BA1;
   color: white;
   border-radius: 10px;
-  transition: 1s;
+  transition: .5s;
 }
+
+#up{
+  display: none;
+}
+.dropbtn:hover #down {
+  float: none;
+  display: none;
+}
+.dropbtn:hover #up {
+  float: none;
+  display: inline;
+}
+
 
 .dropdown-content a:hover {
   background-color: #1F5357;
@@ -106,12 +121,14 @@ body {
   transition: .5s;
 }
 
+
 .dropdown:hover .dropdown-content {
-  opacity: 1;
-    height: auto;
-  transition: .3s;
-  transition-timing-function: ease-in-out;
-}
+  opacity: 1 !important;
+  height: auto !important;
+  transition: .3s !important;
+  transition-timing-function: ease-in-out !important;;
+} 
+
 
 
 @media screen and (max-width: 600px) {
@@ -148,7 +165,7 @@ body {
   footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding-bottom: 10px;
     text-align: center;
   }
   
@@ -190,7 +207,169 @@ body {
     border:1px solid #1F5357;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 30px;
   }
   .topic-container>a{
     text-indent: 10px;
   }
+  .intro{
+    text-align: center;
+  }
+  .intro>h1{
+    font-size:350%;
+    
+    color:#A85751;
+  }
+  .intro>h3{
+    font-size:150%;
+    color: #1F5357;
+    margin-bottom: 4%;
+
+  }
+  .intro>h5{
+    font-size:110%;
+    color: #1F5357;
+    text-decoration: underline;
+  }
+  .intro>a{
+    background-color:#DEA54B ;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-top: 200px;
+  }
+  #gridContainer{
+    display: grid;
+    grid:auto / auto ;
+    
+  }
+
+  .course-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+.course-card>svg{
+  grid-column: 1 / 3;
+}#html_course-card{
+  background-color:#A85751;
+}
+#css_course-card{
+  background-color:#DEA54B;
+}
+#js_course-card{
+  background-color:#6D9886;
+}
+
+.course-card-code-outContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 8px 20px 20px 10px;
+  padding:2px 5px 5px 5px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  
+  
+}
+.course-card-code-outContainer>h3{
+  text-indent: 15px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 150%;
+  margin-bottom: 10px;
+ 
+}
+
+.course-card-code-inContainer{
+  padding:10px 5px 10px 25px;
+  margin:10px ; 
+  background-color: white;
+  border-left:5px solid #04aa6d ;
+  border-radius: 5px;
+}
+.code-tryit-button{
+  
+  padding: 10px;
+  width: fit-content;
+  text-decoration: none;
+  background-color: #04aa6d;
+  color: white;
+  margin: 5px 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.course-card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.course-card-text>h1{
+  margin:0 auto 0 auto ;
+  font-size: 450%;
+  padding-left: 10px;
+  .
+  
+}
+#html_text> p, #html_text>h1{
+  color: white;
+  
+}
+
+#css_text>p,#css_text>h1{
+  color: #1F5357;
+}
+
+#js_text>p,#js_text>h1{
+  color:#393E46;
+}
+
+.course-card-text>a{
+
+  align-self: center;
+  text-decoration: none;
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px 0px;
+}
+
+#html_text>#introButton1{
+  background-color: #04aa6d;
+  color: white;
+}
+#html_text>#introButton2{
+  background-color: #DEA54B;
+  color: white;
+}
+#html_text>#introButton3{
+  background-color: #CBE4DE;
+  color: black;
+}
+
+#css_text>#introButton1{
+  background-color: #04aa6d;
+  color: white;
+}
+#css_text>#introButton2{
+  background-color: #A85751;
+  color: white;
+}
+#css_text>#introButton3{
+  background-color: #CBE4DE;
+  color: black;
+}
+#js_text>#introButton1{
+  background-color: #A85751;
+  color: white;
+}
+#js_text>#introButton2{
+  background-color: #DEA54B;
+  color: white;
+}
+#js_text>#introButton3{
+  background-color: #CBE4DE;
+  color: black;
+}

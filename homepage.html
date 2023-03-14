@@ -15,18 +15,19 @@
         <div id="logo_container"><a href="homepage.html"><img src="Logo.png" alt="logo" ></a></div>
         <div class="topnav" id="myTopnav">
           <a href="homepage.html">Home</a>
-            <div class="dropdown">
+            <div class="dropdown" onclick="navbar('thatone')" >
               <a class="dropbtn">Tutorials 
-                <i class="fa fa-caret-down"></i>
+                <i id="down" class="fa fa-caret-down"></i>
+                <i id="up" class="fa-solid fa-caret-up" ></i>
               </a>
-              <div class="dropdown-content">
-                <div class="dropdown-container" >
+              <div id="thatone" class="dropdown-content">
+                <div class="dropdown-container">
                   <div >
                       <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
                   </div>
                   <div style="display: flex;flex-direction: row;">
                       <div class="topic-container" style="flex: 33%;">
-                          <h3 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h3>
+                          <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
                           <a href="html_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction</a>
                           <a href="html_course.html#basics"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics</a>
                           <a href="html_course.html#attribures"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes</a>
@@ -36,7 +37,7 @@
                           <a href="html_course.html#paragraphs"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Paragraphs</a>
                       </div>
                       <div class="topic-container" style="flex: 33%;">
-                          <h3 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h3>
+                          <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
                           <a href="css_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax</a>
                           <a href="css_course.html#colors"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors</a>
                           <a href="css_course.html#backgrounds"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Backgrounds</a>
@@ -48,7 +49,7 @@
                           <a href="css_course.html#aligns"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Align</a>
                       </div>
                       <div class="topic-container" style="flex: 33%;">
-                          <h3 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h3>
+                          <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
                           <a href="javascript_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction</a>
                           <a href="javascript_course.html#statements"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Statements</a>
                           <a href="javascript_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax</a>
@@ -60,25 +61,26 @@
                   </div>
               </div>
             </div>
-            <div class="dropdown">
-                <a class="dropbtn">Exercises 
-                  <i class="fa fa-caret-down"></i>
+            <div class="dropdown" onclick="navbar('thisone')">
+                <a class="dropbtn" >Exercises 
+                  <i id="down" class="fa fa-caret-down"></i>
+                  <i id="up" class="fa-solid fa-caret-up" ></i>
                 </a>
-                <div class="dropdown-content">
-                    <div class="dropdown-container" ">
+                <div id="thisone" class="dropdown-content">
+                    <div  class="dropdown-container" ">
                     <div>
                         <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
 
                     </div>
                     <div style="display: flex;flex-direction: row;">
                       <div class="topic-container" style="flex: 33%;">
-                          <h3 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h3>
+                          <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
                           <a href="html_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
                           <a href="html_course.html#basics"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
                           <a href="html_course.html#attribures"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
                       </div>
                       <div class="topic-container" style="flex: 33%;">
-                          <h3 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h3>
+                          <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
                           <a href="css_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
                           <a href="css_course.html#colors"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
                           <a href="css_course.html#backgrounds"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
@@ -86,7 +88,7 @@
                           
                       </div>
                       <div class="topic-container" style="flex: 33%;">
-                          <h3 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h3>
+                          <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
                           <a href="javascript_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
                           <a href="javascript_course.html#statements"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
                           <a href="javascript_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
@@ -110,33 +112,357 @@
             
       </header>
       <main>
-        <div>
-          <h1>Learn Web Development with us</h1>
-          <h3>From HTML to JavaScript we've got you covered</h3>
-          <button>Get started</button>
+        <div class="intro">
+          <h1>Learn Web Development with US!</h1>
+          <h3>From HTML to JavaScript we've got you covered. <i class="fa-regular fa-face-smile-wink"></i></h3>
+          <a href="homepage.html#gridContainer">Get Started</a>
           <h5>Not sure where to start. Checkout the featured courses below.</h5>
         </div>
-        <div class="gridContainer" style="display: grid;grid-template-columns: 33% 33% 33%;">
-          <h3 style="grid-column: 1 / span 3;">Featured Courses</h3>
-          <div class="course-card">
-            <h3>HTML & CSS Essentials</h3>
-            <p>Learn the basics of HTML and CSS and start building your own websites.</p>
-            <button class="cta">Learn More</button>
-        </div>
-        <div class="course-card">
-            <h3>Javascript for Beginners</h3>
-            <p>Get started with Javascript and learn how to create interactive web applications.</p>
-            <button class="cta">Learn More</button>
-        </div>
-        <div class="course-card">
-            <h3>React Fundamentals</h3>
-            <p>Learn how to build modern web applications using the React framework.</p>
-            <button class="cta">Learn More</button>
-        </div>
+        <div id="gridContainer">
+          
+          <div id="html_course-card"class="course-card">
+            <svg style="transform: rotateY(180deg);height:50px;width:100%" viewBox="0 11 100 9" preserveAspectRatio="none">
+              <path fill="#D9EEE1" stroke="#D9EEE1" d="M0 15
+                       C 20 8, 30 22, 50 15
+                       C 70 8, 80 22, 110 15
+                       L 110 10, 0 10 Z"></path>
+            </svg>
+            <div id ="html_text"class="course-card-text">
+              <h1>HTML</h1>
+              
+              <p>The language for building web pages</p>
+              <a id="introButton1" href="html_course.html">Learn HTML</a><br>
+              <a id="introButton2" href="html_course.html">Test Your Knowledge</a><br>
+              <a id="introButton3" href="https://www.w3schools.com/tags/default.asp">HTML Reference</a><br>
+              
+            </div>
+            <div class="course-card-code">
+              <div class="course-card-code-outContainer" >
+                <h3>HTML Example:</h3>
+              <div class="course-card-code-inContainer" ">   <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                !DOCTYPE
+                <span class="attributecolor" style="color:red">
+                   html
+                </span>
+                <span class="tagcolor" style="color:mediumblue">&gt;</span>
+             </span>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                html
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                title
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             HTML Tutorial
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                /title
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                body
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <br>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                h1
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             This is a heading
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                /h1
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                p
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             This is a paragraph.
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                /p
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <br>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                /body
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                /html
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+          </div>
+              <a class="code-tryit-button" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_default" target="_blank" class="w3-button tryit-button">Try it Yourself</a>
+            </div>
+          </div>
+           
+          </div>
+          <div id="css_course-card" class="course-card">
+            <svg style="height:50px;width:100%;" viewBox="0 11 100 9" preserveAspectRatio="none">
+              <path fill="#A85751" stroke="#A85751" d="M-10 15
+                C 10 8, 20 22, 40 15
+                C 60 8, 70 22, 100 15
+                L 100 10, -10 10 Z"></path>
+            </svg>
+            <div id ="css_text" class="course-card-text">
+              <h1>CSS</h1>
+              <p>The language for styling web pages</p>
+              <a id="introButton1" href="css_course.html">Learn CSS</a><br>
+              <a id="introButton2" href="css_course.html">Test Your Knowledge</a><br>
+              <a id="introButton3" href="https://www.w3schools.com/cssref/index.php">CSS Reference</a><br>
+            </div>
+            <div class="course-card-code">
+              <div class="course-card-code-outContainer" >
+                <h3>CSS Example:</h3>
+              <div class="course-card-code-inContainer" ">
+                <span class="cssselectorcolor" style="color:brown">
+            body 
+            <span class="cssdelimitercolor" style="color:black">{</span>
+            <span class="csspropertycolor" style="color:red"><br>
+                &nbsp; background-color
+              <span class="csspropertyvaluecolor" style="color:mediumblue">
+                <span class="cssdelimitercolor" style="color:black">:</span>
+                lightblue
+                <span class="cssdelimitercolor" style="color:black">;</span>
+                </span><br>
+            </span>
+              <span class="cssdelimitercolor" style="color:black">}</span>
+              <br><br>
+            h1 
+            <span class="cssdelimitercolor" style="color:black">{</span>
+              <span class="csspropertycolor" style="color:red"><br>
+            &nbsp; color
+            <span class="csspropertyvaluecolor" style="color:mediumblue">
+              <span class="cssdelimitercolor" style="color:black">:</span>
+               white
+               <span class="cssdelimitercolor" style="color:black">;</span>
+              </span>
+              <br>
+            &nbsp; text-align
+            <span class="csspropertyvaluecolor" style="color:mediumblue">
+              <span class="cssdelimitercolor" style="color:black">:</span>
+               center
+               <span class="cssdelimitercolor" style="color:black">;</span>
+              </span>
+              <br>
+            </span>
+            <span class="cssdelimitercolor" style="color:black">}</span>
+            <br><br>
+            p 
+            <span class="cssdelimitercolor" style="color:black">{</span>
+              <span class="csspropertycolor" style="color:red">
+                <br>
+                &nbsp; font-family
+                <span class="csspropertyvaluecolor" style="color:mediumblue">
+                  <span class="cssdelimitercolor" style="color:black">:</span>
+                   verdana
+                   <span class="cssdelimitercolor" style="color:black">;</span>
+                  </span>
+                  <br>
+                  </span>
+                  <span class="cssdelimitercolor" style="color:black">}</span>
+                </span>
+              
+              </div>
+              <a class="code-tryit-button" href="/css/tryit.asp?filename=trycss_default" target="_blank" class="w3-button tryit-button">Try it Yourself</a>
+            </div>
+          </div>
+          </div>
+          
+          <div id="js_course-card"class="course-card">
+            <svg style="transform: rotateY(180deg);height:50px;width:100%" viewBox="0 11 100 9" preserveAspectRatio="none">
+              <path fill="#DEA54B" stroke="#DEA54B2" d="M0 15
+                      C 20 8, 30 22, 50 15
+                      C 70 8, 80 22, 110 15
+                      L 110 10, 0 10 Z"></path>
+            </svg>
+            <div id ="js_text" class="course-card-text">
+              <h1>JavaScript</h1>
+              <p>The language for programming web pages</p>
+              <a id="introButton1" href="javascript_course.html">Learn JavaScript</a><br>
+              <a id="introButton2" href="javascript_course.html">Test Your Knowledge</a><br>
+              <a id="introButton3" href="https://www.w3schools.com/jsref/default.asp">JavaScript Reference</a><br>
+            </div>
+            <div class="course-card-code">
+              <div class="course-card-code-outContainer" >
+                <h3>JavaScript Example:</h3>
+              <div class="course-card-code-inContainer" ">
+                   <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                button
+                <span class="attributecolor" style="color:red">
+                    onclick
+                   <span class="attributevaluecolor" style="color:mediumblue">
+                      ="myFunction()"
+                   </span>
+                </span>
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             Click Me!
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                /button
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <br>
+             <br>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                script
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+             <span class="jscolor" style="color:black">
+             <br>
+             <span class="jskeywordcolor" style="color:mediumblue">
+                function
+             </span>
+              myFunction() {
+                <br>
+                <span class="jsnumbercolor" style="color:red">
+                </span>
+                  &nbsp; 
+                  <span class="jskeywordcolor" style="color:mediumblue">
+                   let
+                </span>
+                 x = document.
+                 <span class="jspropertycolor" style="color:black">
+                   getElementById
+                </span>
+                (
+                   <span class="jsstringcolor" style="color:brown">
+                      "demo"
+                   </span>
+                   );
+                   <br>
+                   <span class="jsnumbercolor" style="color:red">
+             </span>
+             &nbsp; x.
+             <span class="jspropertycolor" style="color:black">
+                style
+             </span>.<span class="jspropertycolor" style="color:black">
+                fontSize
+             </span>
+              = 
+              <span class="jsstringcolor" style="color:brown">
+                "25px"
+             </span>
+                ; <br>
+                <span class="jsnumbercolor" style="color:red">
+             </span>
+             &nbsp; x.
+             <span class="jspropertycolor" style="color:black">
+                style
+             </span>
+             .
+             <span class="jspropertycolor" style="color:black">
+                   color
+                </span>
+                 = 
+                 <span class="jsstringcolor" style="color:brown">
+                   "red"
+                </span>
+                ; 
+                <br>
+             }
+             <br>
+             </span>
+             <span class="tagnamecolor" style="color:brown">
+                <span class="tagcolor" style="color:mediumblue">
+                   &lt;
+                </span>
+                /script
+                <span class="tagcolor" style="color:mediumblue">
+                   &gt;
+                </span>
+             </span>
+                 </div>
+              <a class="code-tryit-button" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_default" target="_blank" >Try it Yourself</a>
+            </div>
+          </div>
+             
+          </div>
         </div>
       </main>
 
     <footer>
+      <svg style="height:50px;width:100%;" viewBox="0 11 100 9" preserveAspectRatio="none">
+        <path fill="#6D9886" stroke="#6D9886" d="M-10 15
+          C 10 8, 20 22, 40 15
+          C 60 8, 70 22, 100 15
+          L 100 10, -10 10 Z"></path>
+      </svg>
       <p>&copy; 2023 Web Tutorial</p>
     </footer>
 

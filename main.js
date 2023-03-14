@@ -85,3 +85,26 @@ function myFunction() {
     }
   }
   
+  function navbar(toggle){
+   var x = document.getElementById(toggle);
+   if(toggle=="thisone"){
+    var i = document.getElementById("thatone");
+   }
+   else{
+    var i = document.getElementById("thisone");
+   }
+
+   x.style.transition= ".3s";
+   if (x.style.opacity == 0) {
+    if(i.style.opacity == 1){
+      i.style.opacity = 0;
+      i.style.height = 0;
+    }
+    x.style.opacity = 1;
+    x.style.height = "auto";
+  } else {
+    x.style.opacity = 0;
+    x.style.height = 0;
+  }
+    
+  }
