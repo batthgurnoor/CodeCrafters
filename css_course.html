@@ -1,278 +1,716 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Web Development Tutorial</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="homepage.css">
-  <script src="main.js"></script>
-</head>
-<body>
-  <header>
-    <div id="logo_container"><a href="homepage.html"><img src="Logo.png" alt="logo" ></a></div>
-    <div class="topnav" id="myTopnav">
-      <a href="homepage.html">Home</a>
-        <div class="dropdown" onclick="navbar('thatone')" >
-          <a class="dropbtn">Tutorials 
-            <i id="down" class="fa fa-caret-down"></i>
-            <i id="up" class="fa-solid fa-caret-up" ></i>
-          </a>
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Development Tutorial</title>
+    <link rel="stylesheet" href="html.css" />
+    <link rel="stylesheet" href="homepage.css" />
+
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="logo_container" onclick="check()">
+        <a href="homepage.html"><img src="Logo.png" alt="logo" /></a>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="homepage.html">Home</a>
+        <div class="dropdown">
+          <a class="dropbtn" onclick="navbar('thatone')">Tutorials </a>
           <div id="thatone" class="dropdown-content">
             <div class="dropdown-container">
-              <div >
-                  <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
+              <div>
+                <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
               </div>
-              <div style="display: flex;flex-direction: row;">
-                  <div class="topic-container" style="flex: 33%;">
-                      <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                      <a href="html_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction</a>
-                      <a href="html_course.html#basics"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics</a>
-                      <a href="html_course.html#attribures"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes</a>
-                      <a href="html_course.html#headings"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings</a>
-                      <a href="html_course.html#ids"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Ids</a>
-                      <a href="html_course.html#classes"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Classes</a>
-                      <a href="html_course.html#paragraphs"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Paragraphs</a>
-                  </div>
-                  <div class="topic-container" style="flex: 33%;">
-                      <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                      <a href="css_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax</a>
-                      <a href="css_course.html#colors"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors</a>
-                      <a href="css_course.html#backgrounds"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Backgrounds</a>
-                      <a href="css_course.html#borders"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders</a>
-                      <a href="css_course.html#margins"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Margins</a>
-                      <a href="css_course.html#texts"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Text</a>
-                      <a href="css_course.html#fonts"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Fonts</a>
-                      <a href="css_course.html#displays"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Display</a>
-                      <a href="css_course.html#aligns"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Align</a>
-                  </div>
-                  <div class="topic-container" style="flex: 33%;">
-                      <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                      <a href="javascript_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction</a>
-                      <a href="javascript_course.html#statements"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Statements</a>
-                      <a href="javascript_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax</a>
-                      <a href="javascript_course.html#variables"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables</a>
-                      <a href="javascript_course.html#lets"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS LET</a>
-                      <a href="javascript_course.html#constants"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS CONST</a>
-                  </div>
+              <div style="display: flex; flex-direction: row">
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction
+                  </a>
+                  <a onclick="display_nav('html_basics')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributes')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headings')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Backgrounds
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Margins
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Text
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Fonts
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Display
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Align
+                  </a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Statements
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
+                  <a onclick="display_nav('html_intro')"
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS LET
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS CONST
+                  </a>
+                </div>
               </div>
-              </div>
+            </div>
           </div>
         </div>
-        <div class="dropdown" onclick="navbar('thisone')">
-            <a class="dropbtn" >Exercises 
-              <i id="down" class="fa fa-caret-down"></i>
-              <i id="up" class="fa-solid fa-caret-up" ></i>
-            </a>
-            <div id="thisone" class="dropdown-content">
-                <div  class="dropdown-container" ">
-                <div>
-                    <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
+        <div class="dropdown">
+          <a class="dropbtn" onclick="navbar('thisone')">Exercises </a>
+          <div id="thisone" class="dropdown-content">
+            <div class="dropdown-container">
+              <div>
+                <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
+              </div>
+              <div style="display: flex; flex-direction: row">
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
+                  <a href="html_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
+                  <a href="html_course.html#basics "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
+                  <a href="html_course.html#attribures "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
+                  <a href="css_course.html#syntax "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
+                  <a href="css_course.html#colors "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
+                  <a href="css_course.html#backgrounds "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
+                  <a href="css_course.html#borders "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
+                  <a href="javascript_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
+                  <a href="javascript_course.html#statements "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a
+                  >
+                  <a href="javascript_course.html#syntax "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a
+                  >
+                  <a href="javascript_course.html#variables "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a
+                  >
+                  <a href="javascript_course.html#lets "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
+                  <a href="javascript_course.html#constants "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0); " style="font-size: 15px" class="icon" onclick="myFunction() ">&#9776;</a>
+      </div>
+    </header>
+    <div style="display: flex; flex-direction: row">
+      <section class="index_container">
+        <h3 class="index_h3">Index</h3>
+        <a class="index_anchor" onclick="display_section('html_intro')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction</a
+        >
+        <a class="index_anchor" onclick="display_section('html_basics')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics</a
+        >
+        <a class="index_anchor" onclick="display_section('html_attributes')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes</a
+        >
+        <a class="index_anchor" onclick="display_section('html_headings')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings</a
+        >
+        <br /><br />
+        <h3 class="index_h3">Quizes</h3>
+        <a class="index_anchor" href="html_course.html#intro "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Introduction Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#basics "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Basics Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#attribures "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Attributes Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#headings "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Headings Quiz</a
+        >
+      </section>
 
-                </div>
-                <div style="display: flex;flex-direction: row;">
-                  <div class="topic-container" style="flex: 33%;">
-                      <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                      <a href="html_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
-                      <a href="html_course.html#basics"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
-                      <a href="html_course.html#attribures"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
-                  </div>
-                  <div class="topic-container" style="flex: 33%;">
-                      <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                      <a href="css_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                      <a href="css_course.html#colors"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                      <a href="css_course.html#backgrounds"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                      <a href="css_course.html#borders"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
-                      
-                  </div>
-                  <div class="topic-container" style="flex: 33%;">
-                      <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                      <a href="javascript_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                      <a href="javascript_course.html#statements"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                      <a href="javascript_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                      <a href="javascript_course.html#variables"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
-                      <a href="javascript_course.html#lets"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
-                      <a href="javascript_course.html#constants"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a>
-                  </div>
+      <section class="body_container" id="body_container" onclick="check()">
+        <div style="display: flex; flex-direction: column">
+          <section class="bodys" id="css_intro" style="display: none">
+            <h1 class="top_heading">CSS Introduction</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('html_intro')"
+                >&#10094; Previous</a
+              >
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('html_intro')"
+                >Next &#10095;</a
+              >
+            </div>
+
+            <hr />
+            <p class="intro">CSS stands for Cascading Style Sheet. It is widely used to design HTML and XML pages.</p>
+            <hr />
+
+            <h2 class="text_top_heading">What is CSS</h2>
+            <ul>
+              <li>CSS stands for Cascading Style Sheets.</li>
+              <li>
+                CSS is a style sheet language used to describe the look and formatting of a document written in a markup
+                language such as HTML or XML.
+              </li>
+              <li>CSS allows web developers to separate the presentation of a web page from its content</li>
+              <li>CSS works by defining rules that apply to specific elements on a web page.</li>
+              <li>
+                CSS can be applied to a web page in several ways, including as an external stylesheet, an embedded
+                stylesheet, or inline styles
+              </li>
+              <li>CSS plays a crucial role in the design and presentation of modern web pages</li>
+            </ul>
+            <hr />
+
+            <h2 class="text_top_heading">A Simple HTML Document</h2>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                h1 &#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;color:red<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;background-color:red; <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;padding:5px; <br />
+                &#125;<br />
+                p &#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;color:green<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;background-color:yellow; <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;padding:25px; <br />
+                &#125;
               </div>
-                </div>
-              
+              <a target="_blank " href="tryit.asp?filename=tryhtml_intro " class="example_button">Try it Yourself &raquo;</a>
             </div>
-          </div>
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-        </div>
-        <svg style="height:50px;width:100%" viewBox="0 11 100 9" preserveAspectRatio="none">
-          <path fill="#2C3333" stroke="#2C3333" d="M0 15
-                   C 20 8, 30 22, 50 15
-                   C 70 8, 80 22, 110 15
-                   L 110 10, 0 10 Z"></path>
-        </svg>
-        
-  </header>
-  
-  <main>
-    <section id="html">
-      <h2>HTML Tutorial</h2>
-      <article>
-        <h3>Topic 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, sapien eu vehicula varius, nisl enim auctor eros, vitae rutrum nunc nibh eget leo.</p>
-        <img src="image1.jpg" alt="Image 1">
-      </article>
-      <article>
-        <h3>Topic 2</h3>
-        <p>Suspendisse lacinia, erat sed rutrum vestibulum, sapien velit ornare mauris, eget dictum mauris massa quis odio. Nulla facilisi.</p>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Topic 3</h3>
-        <p>Cras in dui eget turpis feugiat placerat. Ut vel metus tincidunt, convallis enim eu, ultricies tellus. Vivamus vel lacinia nibh.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Row 1, Column 1</td>
-              <td>Row 1, Column 2</td>
-              <td>Row 1, Column 3</td>
-            </tr>
-            <tr>
-              <td>Row 2, Column 1</td>
-              <td>Row 2, Column 2</td>
-              <td>Row 2, Column 3</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-      <article>
-        <h3>Topic 4</h3>
-        <p>Nunc vel purus eu tellus vehicula laoreet. Phasellus fringilla, augue nec congue viverra, nulla massa tempus erat, sit amet suscipit tortor odio sit amet massa.</p>
-        <figure>
-          <img src="image2.jpg" alt="Image 2">
-          <figcaption>Figure 1: A caption for image 2</figcaption>
-        </figure>
-      </article>
-      <article>
-        <h3>Topic 5</h3>
-        <p>Aenean sit amet mi tincidunt, lacinia quam non, varius tellus. Maecenas euismod libero mi, vel iaculis purus suscipit nec.</p>
-        <ol>
-            <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ol>
-      </article>
-      
-      <button id="html-quiz">Take Quiz</button>
-      <div id="html-quiz-container" style="display: none;">
-        <h2>HTML Quiz</h2>
-        <form id="html-quiz-form">
-          <ol>
-            <li>
-              <h3>Question 1</h3>
-              <p>What does HTML stand for?</p>
-              <label>
-                <input type="radio" name="q1" value="a">
-                A. Hypertext Markup Language
-              </label><br>
-              <label>
-                <input type="radio" name="q1" value="b">
-                B. Hyper Technology Markup Language
-              </label><br>
-              <label>
-                <input type="radio" name="q1" value="c">
-                C. Home Tool Markup Language
-              </label><br>
-            </li>
-            <li>
-              <h3>Question 2</h3>
-              <p>What is the correct way to define a hyperlink in HTML?</p>
-              <label>
-                <input type="radio" name="q2" value="a">
-                A. &lt;a href="http://www.example.com"&gt;Example&lt;/a&gt;
-              </label><br>
-              <label>
-                <input type="radio" name="q2" value="b">
-                B. &lt;link rel="stylesheet" href="style.css"&gt;
-              </label><br>
-              <label>
-                <input type="radio" name="q2" value="c">
-                C. &lt;p&gt;This is a paragraph&lt;/p&gt;
-              </label><br>
-            </li>
-            <li>
-              <h3>Question 3</h3>
-              <p>Which tag is used to define a table in HTML?</p>
-              <label>
-                <input type="radio" name="q3" value="a">
-                A. &lt;table&gt;
-              </label><br>
-              <label>
-                <input type="radio" name="q3" value="b">
-                B. &lt;tr&gt;
-              </label><br>
-              <label>
-                <input type="radio" name="q3" value="c">
-                C. &lt;td&gt;
-              </label><br>
-            </li>
-            <li>
-              <h3>Question 4</h3>
-              <p>Which of the following is NOT a valid input type in HTML?</p>
-              <label>
-                <input type="radio" name="q4" value="a">
-                A. email
-              </label><br>
-              <label>
-                <input type="radio" name="q4" value="b">
-                B. select
-              </label><br>
-              <label>
-                <input type="radio" name="q4" value="c">
-                C. checkbox
-              </label><br>
-            </li>
-            <li>
-              <h3>Question 5</h3>
-              <p>Which tag is used to define a list in HTML?</p>
-              <label>
-                <input type="radio" name="q5" value="a">
-                A. &lt;table&gt;
-              </label><br>
-              <label>
-                <input type="radio" name="q5" value="a">
-                A. &lt;table&gt;
-              </label><br><label>
-                <input type="radio" name="q5" value="a">
-                A. &lt;table&gt;
-              </label><br>
-            </li>
-            <input type="submit" value="Submit">
+            <h3>Example Explained</h3>
+            <ul>
+              <li>
+                The
+                <code class="codespan">h1</code> selector applies the styles to all 'h1' elements on the page
+              </li>
+              <li>
+                The
+                <code class="codespan">p</code> selector applies the styles to all 'p' elements on the page
+              </li>
+              <li>The <code class="codespan">color</code> rule sets the text color of the selected elements.</li>
+              <li>
+                The <code class="codespan">background-color</code> rule sets the background color of the selected elements.
+              </li>
+              <li>
+                The <code class="codespan">padding</code> rule sets the padding of of the selected elements. Padding is the
+                space between the content of an element and its border.
+              </li>
+            </ul>
+            <hr />
+
+            <h2 class="text_top_heading">CSS Saves a Lot of Work!</h2>
+            <p>
+              The style definitions are normally saved in external .css files.<br />
+              With an external stylesheet file, you can change the look of an entire website by changing just one file!
+            </p>
+
+            <div class="note">
+              <p><strong>Note:</strong> Before starting CSS tutorials, please make sure you are proficient in HTML.</p>
             </div>
-          </form>
+            <hr />
+
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
+          <section class="bodys" id="css_syntax" style="display: none">
+            <h1 class="top_heading">CSS Syntax</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('html_basics')"
+                >&#10094; Previous</a
+              >
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('html_basics')"
+                >Next &#10095;</a
+              >
+            </div>
+            <hr />
+            <p class="intro">A CSS rule set contains a selector and a declaration block.</p>
+            <hr />
+            <div id="image_container">
+              <img src="cssSyntax.png" style="margin: auto; display: block" />
+            </div>
+            <h2 class="text_top_heading">HTML Documents</h2>
+            <p>
+              <strong>Selector</strong>: Selector indicates the HTML element you want to style. It could be any tag like
+              <code class="codespan">h1</code>, <code class="codespan">title</code> etc.
+            </p>
+            <p>
+              <strong>Declaration Block</strong>: The declaration block can contain one or more declarations separated by a
+              semicolon.
+            </p>
+            <p>
+              <strong>Property</strong>: A Property is a type of attribute of HTML element. It could be color, border etc.
+            </p>
+            <p><strong>Values</strong>: Values are assigned to CSS properties.</p>
+            <hr />
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">p</span> &#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown"> color</span> : green<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="color: brown">background-color</span>
+                : yellow; <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown"> padding </span> : 25px; <br />
+                &#125;
+              </div>
+              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
+            </div>
+
+            <h2 class="text_top_heading">Example Explained</h2>
+            <p><code class="codespan">p</code> is a selector in CSS it points to the HTML element you want to style.</p>
+            <p>
+              <code class="codespan">color</code> is a property, and <code class="codespan">green</code> is the value of the
+              property.
+            </p>
+            <p>
+              <code class="codespan">background-color</code> is a property, and <code class="codespan">yellow</code> is the
+              value of the property.
+            </p>
+            <p>
+              <code class="codespan">padding</code> is a property, and <code class="codespan">25px</code> is the value of the
+              property.
+            </p>
+            <div class="note">
+              <p>
+                <strong>Note:</strong> Multiple CSS declarations are separated with semicolons, and declaration blocks are
+                surrounded by curly braces.
+              </p>
+            </div>
+
+            <hr />
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
+          <section class="bodys" id="css_colors" style="display: none">
+            <h1 class="top_heading">CSS Colors</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('html_attributes')"
+                >&#10094; Previous</a
+              >
+              <a
+                class="example_button"
+                id="button_next"
+                style="justify-self: right"
+                onclick="cssSection_next('html_attributes')"
+                >Next &#10095;</a
+              >
+            </div>
+            <hr />
+            <p class="intro">The color property in CSS is used to set the color of HTML elements.</p>
+            <hr />
+            <p>
+              In CSS, we use color values for specifying the color. We can also use this property for the border-color and
+              other decorative effects.<br />
+              We can define the color of an element by using the following ways:<br />
+            </p>
+            <ul>
+              <li>RGB format</li>
+              <li>RGBA format</li>
+              <li>Hexadecimal notation</li>
+              <li>HSL</li>
+              <li>HSLA</li>
+              <li>Built-in color names</li>
+            </ul>
+            <p>Let's understand the syntax and description of the above ways in detail.</p>
+            <hr />
+            <h2 class="text_top_heading">RGB Format</h2>
+            <p>
+              RGB format is the short form of '<strong>RED</strong> , <strong>GREEN</strong> and <strong>BLUE</strong>' that
+              is used for defining the color of an HTML element simply by specifying the values of <strong>R</strong> ,
+              <strong>G</strong> and <strong>B</strong> that are in the range of <strong>0</strong> to <strong>255</strong>.
+            </p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">#rgb</span>&nbsp;&#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">color</span>&nbsp;: rgb(255,0,0); <br />
+                &#125;
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">RGBA Format</h2>
+            <p>
+              It is almost similar to <strong>RGB</strong> format except that <strong>RGBA</strong> contains
+              <strong>A (Alpha)</strong> that specifies the element's transparency.<br />
+              The value of alpha is in the range<strong> 0.0</strong> to <strong>1.0</strong>, in which
+              <strong>0.0</strong> is for fully transparent, and <strong>1.0</strong> is for not transparent.
+            </p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">#rgba</span>&nbsp;&#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">color</span>&nbsp;: rgb(255,0,0,0.6);
+                <br />
+                &#125;
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">Hexadecimal Notation</h2>
+            <p>
+              Hexadecimal can be defined as a six-digit color representation.<br />This notation starts with the
+              <strong># symbol</strong> followed by six characters ranges from <strong>0</strong> to
+              <strong>F</strong>.<br />
+              In hexadecimal notation, the first two digits represent the <strong>red (RR)</strong> color value,<br />
+              the next two digits represent the green <strong>(GG)</strong> color value, and the last two digits represent
+              the blue <strong>(BB)</strong> color value.
+            </p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">#hexadecimal</span>&nbsp;&#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">color</span>&nbsp;:
+                #(0-F)(0-F)(0-F)(0-F)(0-F)(0-F);
+                <br />
+                &#125;
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">HSL Notation</h2>
+            <p>
+              It is a short form of <strong>Hue</strong>, <strong>Saturation</strong>, and <strong>Lightness</strong>.<br />
+            </p>
+            <ul>
+              <li>
+                <strong>Hue</strong>: It can be defined as the degree on the color wheel from 0 to 360.<br />
+                <strong>0</strong> represents <strong>red</strong>, <strong>120</strong> represents <strong>green</strong>,
+                <strong>240</strong> represents <strong>blue</strong>.<br />
+              </li>
+              <li><strong>Saturation</strong>: It takes value in percentage in which 100% represents fully saturated,</li>
+              <li>
+                <strong>Lightness</strong>: The lightness of the color can be defined as the light that we want to provide
+                the color
+              </li>
+            </ul>
+
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">#hsl</span>&nbsp;&#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">color</span>&nbsp;:
+                <span style="color: darkgreen"> hsl</span>(H,S,L);
+                <br />
+                &#125;
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">HSLA Notation</h2>
+            <p>
+              It is entirely similar to HSL property, except that it contains <strong>A (alpha)</strong> that specifies the
+              element's transparency.<br />
+              The value of alpha is in the range <strong>0.0</strong> to <strong>1.0</strong>, in which
+              <strong>0.0</strong> indicates fully transparent, and <strong>1.0</strong> indicates not transparent.
+            </p>
+
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">#hsla</span>&nbsp;&#123;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">color</span>&nbsp;:
+                <span style="color: darkgreen"> hsla</span>(H, S, L, A);
+                <br />
+                &#125;
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+          </section>
+          <section class="bodys" id="css_borders" style="display: block">
+            <h1 class="top_heading">CSS Border</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('html_headings')"
+                >&#10094; Previous</a
+              >
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('html_headings')"
+                >Next &#10095;</a
+              >
+            </div>
+            <hr />
+            <p class="intro">The CSS border is a shorthand property used to set the border on an element.</p>
+            <hr />
+
+            <h2>Syntax</h2>
+            <p>
+              The CSS border properties are use to specify the style, color and size of the border of an element.<br />
+              The CSS border properties are given below :
+            </p>
+            <ul>
+              <li>border-style</li>
+              <li>border-color</li>
+              <li>border-width</li>
+              <li>border-radius</li>
+            </ul>
+
+            <hr />
+            <h2>CSS border-style</h2>
+            <p>
+              The <code class="codespan">border-style</code> property is used to specify the border type which you want to
+              display on the web page.<br /><br />
+              The following values are used :<br />
+            </p>
+            <ul>
+              <li><code class="codespan">none</code> : It doesn't define any border.</li>
+              <li><code class="codespan">dotted</code> : It is used to define a dotted border.</li>
+              <li><code class="codespan">dashed</code> : It is used to define a dashed border.</li>
+              <li><code class="codespan">solid</code> : It is used to define a solid border.</li>
+              <li><code class="codespan">double</code> : It defines two borders wIth the same border-width value.</li>
+              <li>
+                <code class="codespan">groove</code> : It defines a 3d grooved border. effect is generated according to
+                border-color value.
+              </li>
+              <li>
+                <code class="codespan">ridge</code> : It defines a 3d ridged border. effect is generated according to
+                border-color value.
+              </li>
+              <li>
+                <code class="codespan">inset</code> : It defines a 3d inset border. effect is generated according to
+                border-color value.
+              </li>
+              <li>
+                <code class="codespan">outset</code> : It defines a 3d outset border. effect is generated according to
+                border-color value.
+              </li>
+            </ul>
+
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">p.none</span> &#123; &nbsp;<span style="color: brown"> border-style</span> : none
+                &nbsp; &#125;<br />
+                <span style="color: red">p.dotted</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                dotted &nbsp; &#125;<br />
+                <span style="color: red">p.dashed</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                dashed &nbsp; &#125;<br />
+                <span style="color: red">p.solid</span> &#123; &nbsp;<span style="color: brown"> border-style</span> : solid
+                &nbsp; &#125;<br />
+                <span style="color: red">p.double</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                double &nbsp; &#125;<br />
+                <span style="color: red">p.groove</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                groove &nbsp; &#125;<br />
+                <span style="color: red">p.ridge</span> &#123; &nbsp;<span style="color: brown"> border-style</span> : ridge
+                &nbsp; &#125;<br />
+                <span style="color: red">p.inset</span> &#123; &nbsp;<span style="color: brown"> border-style</span> : inset
+                &nbsp; &#125;<br />
+                <span style="color: red">p.outset</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                outset &nbsp; &#125;<br />
+              </div>
+              <h3 class="example_title">Result</h3>
+              <div class="example_content">
+                <p style="border-style: none; text-align: center">none</p>
+                <p style="border-style: dotted; text-align: center">dotted</p>
+                <p style="border-style: dashed; text-align: center">dashed</p>
+                <p style="border-style: solid; text-align: center">solid</p>
+                <p style="border-style: double; text-align: center">double</p>
+                <p style="border-style: groove; text-align: center">groove</p>
+                <p style="border-style: ridge; text-align: center">ridge</p>
+                <p style="border-style: inset; text-align: center">inset</p>
+                <p style="border-style: outset; text-align: center">outset</p>
+              </div>
+
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings"
+                class="example_button"
+                >Try it Yourself</a
+              >
+            </div>
+
+            <hr />
+            <h2>CSS border-width</h2>
+            <p>
+              The <code class="codespan">border-width</code> property is used to set the border's width. It is usually set in
+              pixels.<br /><br />
+              You can also use the one of the three pre-defined values, thin, medium or thick to set the width of the
+              border.<br />
+            </p>
+
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">p.one</span> &#123; &nbsp;<span style="color: brown"> border-style</span> : solid;
+                <span style="color: brown"> border-width</span> : 6px; &nbsp; &#125;<br />
+                <span style="color: red">p.next</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                dotted;<span style="color: brown"> border-width</span> : slim; &nbsp; &#125;<br />
+                <span style="color: red">p.after</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                dashed;<span style="color: brown"> border-width</span> : medium; &nbsp; &#125;<br />
+                <span style="color: red">p.last</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                solid;<span style="color: brown"> border-width</span> : thick; &nbsp; &#125;<br />
+              </div>
+              <h3 class="example_title">Result</h3>
+              <div class="example_content">
+                <p style="border-style: solid; text-align: center; border-width: 6px">solid 6px</p>
+                <p style="border-style: dotted; text-align: center; border-width: slim">dotted slim</p>
+                <p style="border-style: dashed; text-align: center; border-width: medium">dashed medium</p>
+                <p style="border-style: solid; text-align: center; border-width: thick">solid thick</p>
+              </div>
+
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings"
+                class="example_button"
+                >Try it Yourself</a
+              >
+            </div>
+            <div class="example_note">
+              <p>
+                <strong>Note:</strong> The border-color property is not used alone. It is always used with other border
+                properties like "border-style" property to set the border first otherwise it will not work.
+              </p>
+            </div>
+
+            <hr />
+            <h2>CSS border-width</h2>
+            <p>
+              The <code class="codespan">border-width</code> property is used to set the border's width. It is usually set in
+              pixels.<br /><br />
+              You can also use the one of the three pre-defined values, thin, medium or thick to set the width of the
+              border.<br />
+            </p>
+
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">p.one</span> &#123; &nbsp;<span style="color: brown"> border-style</span> : solid;
+                <span style="color: brown"> border-width</span> : 6px; &nbsp; &#125;<br />
+                <span style="color: red">p.next</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                dotted;<span style="color: brown"> border-width</span> : slim; &nbsp; &#125;<br />
+                <span style="color: red">p.after</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                dashed;<span style="color: brown"> border-width</span> : medium; &nbsp; &#125;<br />
+                <span style="color: red">p.last</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                solid;<span style="color: brown"> border-width</span> : thick; &nbsp; &#125;<br />
+              </div>
+              <h3 class="example_title">Result</h3>
+              <div class="example_content">
+                <p style="border-style: solid; text-align: center; border-width: 6px">solid 6px</p>
+                <p style="border-style: dotted; text-align: center; border-width: slim">dotted slim</p>
+                <p style="border-style: dashed; text-align: center; border-width: medium">dashed medium</p>
+                <p style="border-style: solid; text-align: center; border-width: thick">solid thick</p>
+              </div>
+
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings"
+                class="example_button"
+                >Try it Yourself</a
+              >
+            </div>
+            <hr />
+
+            <h2>CSS border-radius</h2>
+            <p>
+              The <code class="codespan">border-radius</code> property sets the rounded borders and provides the rounded
+              corners around an element, tags, or div.<br />
+              It defines the radius of the corners of an element.<br /><br />
+              It is shorthand for <strong>border-top-left-radius</strong>, <strong>border-top-right-radius</strong>,
+              <strong>border-bottom-right-radius</strong> and <strong>border-bottom-left-radius</strong>.<br />
+            </p>
+
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">p.last</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
+                solid;<span style="color: brown"> border-width</span> : thick;<span style="color: brown">
+                  border-radius</span
+                >
+                : 10px; &nbsp; &#125;<br />
+              </div>
+              <h3 class="example_title">Result</h3>
+              <div class="example_content">
+                <p style="border-style: solid; text-align: center; border-width: thick; border-radius: 10px">
+                  solid thick rounded
+                </p>
+              </div>
+
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings"
+                class="example_button"
+                >Try it Yourself</a
+              >
+            </div>
+            <hr />
+
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
         </div>
       </section>
-    </main>
-
-    <aside>
-        <h2>Navigation</h2>
-        <ul>
-          <li><a href="html_course.html">HTML</a></li>
-          <li><a href="css_course.html">CSS</a></li>
-          <li><a href="javascript_course.html">JavaScript</a></li>
-        </ul>
-      </aside>
-
+    </div>
     <footer>
       <p>&copy; 2023 Web Tutorial</p>
     </footer>
-
-    <script src="main.js"></script>
   </body>
 </html>

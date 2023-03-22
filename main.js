@@ -1,9 +1,7 @@
-// HTML quiz
-const htmlQuizButton = document.getElementById("html-quiz");
+/* // HTML quiz */const htmlQuizButton = document.getElementById("html-quiz");
 const htmlQuizContainer = document.getElementById("html-quiz-container");
 const htmlQuizForm = document.getElementById("html-quiz-form");
 const htmlQuizScore = document.getElementById("html-quiz-score");
-
 const htmlQuizQuestions = [
   {
     question: "What does HTML stand for?",
@@ -75,28 +73,26 @@ htmlQuizForm.addEventListener("submit", (event) => {
   htmlQuizScore.style.display = "block";
 });
 
-
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
   }
-  
-  function navbar(toggle){
-   var x = document.getElementById(toggle);
-   if(toggle=="thisone"){
-    var i = document.getElementById("thatone");
-   }
-   else{
-    var i = document.getElementById("thisone");
-   }
+}
 
-   x.style.transition= ".3s";
-   if (x.style.opacity == 0) {
-    if(i.style.opacity == 1){
+function navbar(toggle) {
+  var x = document.getElementById(toggle);
+  if (toggle == "thisone") {
+    var i = document.getElementById("thatone");
+  } else {
+    var i = document.getElementById("thisone");
+  }
+
+  x.style.transition = ".3s";
+  if (x.style.opacity == 0) {
+    if (i.style.opacity == 1) {
       i.style.opacity = 0;
       i.style.height = 0;
     }
@@ -106,5 +102,86 @@ function myFunction() {
     x.style.opacity = 0;
     x.style.height = 0;
   }
-    
+
+  var a = document.getElementById("down");
+  var b = document.getElementById("up");
+  if (a.style.display == "inline") {
+    a.style.display = "none";
+    b.style.display = "inline";
+  } else {
+    a.style.display = "inline";
+    b.style.display = "none";
   }
+}
+
+function check() {
+  var x = document.getElementsByClassName("dropdown-content");
+  for (let item of x) {
+    item.style.opacity = 0;
+    item.style.height = 0;
+  }
+}
+
+function section_previous(toggle) {
+  document.getElementById(toggle).style.display = "none";
+  if (toggle === "html_intro") {
+    document.getElementById("html_headings").style.display = "block";
+  } else if (toggle === "html_basics") {
+    document.getElementById("html_intro").style.display = "block";
+  } else if (toggle === "html_attributes") {
+    document.getElementById("html_basics").style.display = "block";
+  } else {
+    document.getElementById("html_attributes").style.display = "block";
+  }
+}
+
+function cssSection_previous(toggle) {
+  document.getElementById(toggle).style.display = "none";
+  if (toggle === "html_intro") {
+    document.getElementById("html_headings").style.display = "block";
+  } else if (toggle === "html_basics") {
+    document.getElementById("html_intro").style.display = "block";
+  } else if (toggle === "html_attributes") {
+    document.getElementById("html_basics").style.display = "block";
+  } else {
+    document.getElementById("html_attributes").style.display = "block";
+  }
+}
+function htmlsection_next(toggle) {
+  document.getElementById(toggle).style.display = "none";
+  if (toggle === "html_intro") {
+    document.getElementById("html_basics").style.display = "block";
+  } else if (toggle === "html_basics") {
+    document.getElementById("html_attributes").style.display = "block";
+  } else if (toggle === "html_attributes") {
+    document.getElementById("html_headings").style.display = "block";
+  } else {
+    document.getElementById("html_intro").style.display = "block";
+  }
+}
+function cssSection_next(toggle) {
+  document.getElementById(toggle).style.display = "none";
+  if (toggle === "html_intro") {
+    document.getElementById("html_basics").style.display = "block";
+  } else if (toggle === "html_basics") {
+    document.getElementById("html_attributes").style.display = "block";
+  } else if (toggle === "html_attributes") {
+    document.getElementById("html_headings").style.display = "block";
+  } else {
+    document.getElementById("html_intro").style.display = "block";
+  }
+}
+
+function display_section(toggle) {
+  var list = document.getElementsByClassName("bodys");
+  for (let item of list) {
+    item.style.display = "none";
+  }
+  document.getElementById(toggle).style.display = "block";
+}
+
+function display_nav(toggle) {
+  const page = toggle.split("_");
+  window.location.href = page[0] + "_course.html#" + page[1];
+  display_section(toggle);
+}

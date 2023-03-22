@@ -104,14 +104,6 @@ body {
 #up{
   display: none;
 }
-.dropbtn:hover #down {
-  float: none;
-  display: none;
-}
-.dropbtn:hover #up {
-  float: none;
-  display: inline;
-}
 
 
 .dropdown-content a:hover {
@@ -120,14 +112,7 @@ body {
   transform: scale(1.1);
   transition: .5s;
 }
-
-
-.dropdown:hover .dropdown-content {
-  opacity: 1 !important;
-  height: auto !important;
-  transition: .3s !important;
-  transition-timing-function: ease-in-out !important;;
-} 
+ 
 
 
 
