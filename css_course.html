@@ -39,32 +39,18 @@
                 </div>
                 <div class="topic-container" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                  <a onclick="display_nav('html_intro')">
+                  <a onclick="display_nav('css_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction
+                  </a>
+                  <a onclick="display_nav('css_syntax')">
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
                   </a>
-                  <a onclick="display_nav('html_intro')">
+                  <a onclick="display_nav('css_colors')">
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
                   </a>
-                  <a onclick="display_nav('html_intro')">
-                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Backgrounds
-                  </a>
-                  <a onclick="display_nav('html_intro')">
+
+                  <a onclick="display_nav('css_borders')">
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
-                  </a>
-                  <a onclick="display_nav('html_intro')">
-                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Margins
-                  </a>
-                  <a onclick="display_nav('html_intro')">
-                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Text
-                  </a>
-                  <a onclick="display_nav('html_intro')">
-                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Fonts
-                  </a>
-                  <a onclick="display_nav('html_intro')">
-                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Display
-                  </a>
-                  <a onclick="display_nav('html_intro')">
-                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Align
                   </a>
                 </div>
                 <div class="topic-container" style="flex: 33%">
@@ -140,17 +126,17 @@
     <div style="display: flex; flex-direction: row">
       <section class="index_container">
         <h3 class="index_h3">Index</h3>
-        <a class="index_anchor" onclick="display_section('html_intro')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction</a
+        <a class="index_anchor" onclick="display_section('css_intro')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Introduction</a
         >
-        <a class="index_anchor" onclick="display_section('html_basics')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics</a
+        <a class="index_anchor" onclick="display_section('css_syntax')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Syntax</a
         >
-        <a class="index_anchor" onclick="display_section('html_attributes')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes</a
+        <a class="index_anchor" onclick="display_section('css_colors')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Colors</a
         >
-        <a class="index_anchor" onclick="display_section('html_headings')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings</a
+        <a class="index_anchor" onclick="display_section('css_borders')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Border</a
         >
         <br /><br />
         <h3 class="index_h3">Quizes</h3>
@@ -177,10 +163,10 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="cssSection_previous('html_intro')"
+                onclick="cssSection_previous('css_intro')"
                 >&#10094; Previous</a
               >
-              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('html_intro')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('css_intro')"
                 >Next &#10095;</a
               >
             </div>
@@ -264,10 +250,10 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="cssSection_previous('html_basics')"
+                onclick="cssSection_previous('css_syntax')"
                 >&#10094; Previous</a
               >
-              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('html_basics')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('css_syntax')"
                 >Next &#10095;</a
               >
             </div>
@@ -336,14 +322,10 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="cssSection_previous('html_attributes')"
+                onclick="cssSection_previous('css_colors')"
                 >&#10094; Previous</a
               >
-              <a
-                class="example_button"
-                id="button_next"
-                style="justify-self: right"
-                onclick="cssSection_next('html_attributes')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('css_colors')"
                 >Next &#10095;</a
               >
             </div>
@@ -492,10 +474,10 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="cssSection_previous('html_headings')"
+                onclick="cssSection_previous('css_borders')"
                 >&#10094; Previous</a
               >
-              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('html_headings')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('css_borders')"
                 >Next &#10095;</a
               >
             </div>

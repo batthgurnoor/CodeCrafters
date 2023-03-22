@@ -1,4 +1,4 @@
-/* // HTML quiz */const htmlQuizButton = document.getElementById("html-quiz");
+/* // HTML quiz */ const htmlQuizButton = document.getElementById("html-quiz");
 const htmlQuizContainer = document.getElementById("html-quiz-container");
 const htmlQuizForm = document.getElementById("html-quiz-form");
 const htmlQuizScore = document.getElementById("html-quiz-score");
@@ -122,7 +122,7 @@ function check() {
   }
 }
 
-function section_previous(toggle) {
+function htmlSection_previous(toggle) {
   document.getElementById(toggle).style.display = "none";
   if (toggle === "html_intro") {
     document.getElementById("html_headings").style.display = "block";
@@ -137,17 +137,17 @@ function section_previous(toggle) {
 
 function cssSection_previous(toggle) {
   document.getElementById(toggle).style.display = "none";
-  if (toggle === "html_intro") {
-    document.getElementById("html_headings").style.display = "block";
-  } else if (toggle === "html_basics") {
-    document.getElementById("html_intro").style.display = "block";
-  } else if (toggle === "html_attributes") {
-    document.getElementById("html_basics").style.display = "block";
+  if (toggle === "css_intro") {
+    document.getElementById("css_borders").style.display = "block";
+  } else if (toggle === "css_syntax") {
+    document.getElementById("css_intro").style.display = "block";
+  } else if (toggle === "css_colors") {
+    document.getElementById("css_syntax").style.display = "block";
   } else {
-    document.getElementById("html_attributes").style.display = "block";
+    document.getElementById("css_colors").style.display = "block";
   }
 }
-function htmlsection_next(toggle) {
+function htmlSection_next(toggle) {
   document.getElementById(toggle).style.display = "none";
   if (toggle === "html_intro") {
     document.getElementById("html_basics").style.display = "block";
@@ -161,14 +161,14 @@ function htmlsection_next(toggle) {
 }
 function cssSection_next(toggle) {
   document.getElementById(toggle).style.display = "none";
-  if (toggle === "html_intro") {
-    document.getElementById("html_basics").style.display = "block";
-  } else if (toggle === "html_basics") {
-    document.getElementById("html_attributes").style.display = "block";
-  } else if (toggle === "html_attributes") {
-    document.getElementById("html_headings").style.display = "block";
+  if (toggle === "css_intro") {
+    document.getElementById("css_syntax").style.display = "block";
+  } else if (toggle === "css_syntax") {
+    document.getElementById("css_colors").style.display = "block";
+  } else if (toggle === "css_colors") {
+    document.getElementById("css_borders").style.display = "block";
   } else {
-    document.getElementById("html_intro").style.display = "block";
+    document.getElementById("css_intro").style.display = "block";
   }
 }
 
