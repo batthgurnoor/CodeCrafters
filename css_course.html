@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Web Development Tutorial</title>
-    <link rel="stylesheet" href="html.css" />
     <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="html.css" />
 
     <script src="main.js"></script>
   </head>
@@ -22,7 +23,7 @@
                 <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
               </div>
               <div style="display: flex; flex-direction: row">
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
                   <a onclick="display_nav('html_intro')">
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction
@@ -37,10 +38,10 @@
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
                   </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="css_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
                   <a onclick="display_nav('css_intro')">
-                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Introduction
                   </a>
                   <a onclick="display_nav('css_syntax')">
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
@@ -53,7 +54,7 @@
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
                   </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="js_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
                   <a onclick="display_nav('html_intro')">
                     <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction

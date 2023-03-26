@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Web Development Tutorial</title>
@@ -24,69 +23,57 @@
                 <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
               </div>
               <div style="display: flex; flex-direction: row">
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction</a
-                  >
-                  <a onclick="display_nav('html_basics')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics</a
-                  >
-                  <a onclick="display_nav('html_attributes')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes</a
-                  >
-                  <a onclick="display_nav('html_headings')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings</a
-                  >
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction
+                  </a>
+                  <a onclick="display_nav('html_basics')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributes')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headings')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="css_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Backgrounds</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Margins</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Text</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Fonts</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Display</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Align</a
-                  >
+                  <a onclick="display_nav('css_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Introduction
+                  </a>
+                  <a onclick="display_nav('css_syntax')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('css_colors')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
+
+                  <a onclick="display_nav('css_borders')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="js_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Statements
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
                   <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Statements</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax</a
-                  >
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables</a
-                  >
-                  <a onclick="display_nav('html_intro')"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS LET</a>
-                  <a onclick="display_nav('html_intro')"
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS CONST</a
-                  >
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS LET
+                  </a>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS CONST
+                  </a>
                 </div>
               </div>
             </div>

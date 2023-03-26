@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Development Tutorial</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="html.css" />
+
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="logo_container" onclick="check()">
+        <a href="homepage.html"><img src="Logo.png" alt="logo" /></a>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="homepage.html">Home</a>
+        <div class="dropdown">
+          <a class="dropbtn" onclick="navbar('thatone')">Tutorials </a>
+          <div id="thatone" class="dropdown-content">
+            <div class="dropdown-container">
+              <div>
+                <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
+              </div>
+              <div style="display: flex; flex-direction: row">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction
+                  </a>
+                  <a onclick="display_nav('html_basics')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributes')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headings')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
+                </div>
+                <div class="topic-container" id="css_nav" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
+                  <a onclick="display_nav('css_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Introduction
+                  </a>
+                  <a onclick="display_nav('css_syntax')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('css_colors')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
+
+                  <a onclick="display_nav('css_borders')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
+                </div>
+                <div class="topic-container" id="js_nav" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
+                  <a onclick="display_nav('js_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction
+                  </a>
+                  <a onclick="display_nav('js_syntax')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
+                  <a onclick="display_nav('js_variables')"
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('js_operators')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators
+                  </a>
+                  <a onclick="display_nav('js_functions')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="dropbtn" onclick="navbar('thisone')">Exercises </a>
+          <div id="thisone" class="dropdown-content">
+            <div class="dropdown-container">
+              <div>
+                <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
+              </div>
+              <div style="display: flex; flex-direction: row">
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
+                  <a href="html_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
+                  <a href="html_course.html#basics "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
+                  <a href="html_course.html#attribures "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
+                  <a href="css_course.html#syntax "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
+                  <a href="css_course.html#colors "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
+                  <a href="css_course.html#backgrounds "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
+                  <a href="css_course.html#borders "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
+                  <a href="javascript_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
+                  <a href="javascript_course.html#statements "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a
+                  >
+                  <a href="javascript_course.html#syntax "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a
+                  >
+                  <a href="javascript_course.html#variables "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a
+                  >
+                  <a href="javascript_course.html#lets "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
+                  <a href="javascript_course.html#constants "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0); " style="font-size: 15px" class="icon" onclick="myFunction() ">&#9776;</a>
+      </div>
+    </header>
+    <div style="display: flex; flex-direction: row">
+      <section class="index_container">
+        <h3 class="index_h3">Index</h3>
+        <a class="index_anchor" onclick="display_section('js_intro')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Introduction</a
+        >
+        <a class="index_anchor" onclick="display_section('js_syntax')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Syntax</a
+        >
+        <a class="index_anchor" onclick="display_section('js_variables')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Variables</a
+        >
+        <a class="index_anchor" onclick="display_section('js_operators')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Operators</a
+        >
+        <a class="index_anchor" onclick="display_section('js_functions')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Functions</a
+        >
+        <br /><br />
+        <h3 class="index_h3">Quizes</h3>
+        <a class="index_anchor" href="html_course.html#intro "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Introduction Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#basics "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Basics Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#attribures "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Attributes Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#headings "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Headings Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#basics "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Basics Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#attribures "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Attributes Quiz</a
+        >
+        <a class="index_anchor" href="html_course.html#headings "
+          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Headings Quiz</a
+        >
+      </section>
+
+      <section class="body_container" id="body_container" onclick="check()">
+        <div style="display: flex; flex-direction: column">
+          <section class="bodys" id="js_intro" style="display: none">
+            <h1 class="top_heading">JS Introduction</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="jsSection_previous('js_intro')"
+                >&#10094; Previous</a
+              >
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="jsSection_next('js_intro')"
+                >Next &#10095;</a
+              >
+            </div>
+
+            <hr />
+            <p class="intro">
+              JavaScript (js) is a light-weight object-oriented programming language which is used by several websites for
+              scripting the webpages.
+            </p>
+            <hr />
+
+            <h2 class="text_top_heading">What is JavaScript</h2>
+            <ul>
+              <li>JavaScript is an object-based scripting language which is lightweight and cross-platform.</li>
+              <li>JavaScript is not a compiled language, but it is a translated language.</li>
+              <li>
+                The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for
+                the web browser.
+              </li>
+              <li>
+                It is an interpreted, full-fledged programming language that enables dynamic interactivity on websites when
+                applied to an HTML document.
+              </li>
+              <li>
+                With JavaScript, users can build modern web applications to interact directly without reloading the page
+                every time.
+              </li>
+              <li>JavaScript has no connectivity with Java programming language.</li>
+            </ul>
+            <hr />
+
+            <h2 class="text_top_heading">Features of JavaScript</h2>
+            <ul>
+              <li>All popular web browsers support JavaScript as they provide built-in execution environments.</li>
+              <li>
+                JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured
+                programming language.
+              </li>
+              <li>
+                JavaScript is an object-oriented programming language that uses prototypes rather than using classes for
+                inheritance.
+              </li>
+              <li>It is a case-sensitive language.</li>
+              <li>JavaScript is supportable in several operating systems including, Windows, macOS, etc.</li>
+            </ul>
+            <hr />
+
+            <h2 class="text_top_heading">Application of JavaScript</h2>
+            <p>JavaScript is used to create interactive websites. It is mainly used for :</p>
+
+            <ul>
+              <li>Client-side validation.</li>
+              <li>Dynamic drop-down menus.</li>
+              <li>Displaying date and time.</li>
+              <li>Displaying pop-up windows and dialog boxes.</li>
+              <li>Displaying clocks etc.</li>
+            </ul>
+            <hr />
+            <div class="example">
+              <h3 class="example_title">Example - The light bulb</h3>
+              <div class="example_content">
+                <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+                <img id="myImage" src="pic_bulboff.gif" style="width: 100px" />
+
+                <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+              </div>
+            </div>
+
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
+          <section class="bodys" id="js_syntax" style="display: none">
+            <h1 class="top_heading">JavaScript Syntax</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('js_syntax')"
+                >&#10094; Previous</a
+              >
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('js_syntax')"
+                >Next &#10095;</a
+              >
+            </div>
+            <hr />
+            <p class="intro">JavaScript syntax is the set of rules, how JavaScript programs are constructed.</p>
+            <hr />
+
+            <h2 class="text_top_heading">The <code class="codespan">&lt;script&gt;</code> Tag</h2>
+            <p>
+              JavaScript can be implemented using JavaScript statements that are placed within the
+              <strong>&lt;script&gt; ... &lt;/script&gt;</strong> HTML tags in a web page.
+            </p>
+            <p>
+              You can place the <strong>&lt;script></strong> tags, containing your JavaScript, anywhere within your web page,
+              but it is normally recommended that you should keep it within the <strong>&lt;head></strong> tags.
+            </p>
+            <p>
+              The <strong>&lt;script&gt;</strong> tag alerts the browser program to start interpreting all the text between
+              these tags as a script. A simple syntax of your JavaScript will appear as follows.
+            </p>
+
+            <div class="example">
+              <h3 class="example_title">Syntax</h3>
+              <div class="example_content">
+                <<span style="color: red">script</span>><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span> JavaScript Code</span><br />
+                <<span style="color: red">/script</span>><br />
+              </div>
+              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
+            </div>
+            <hr />
+
+            <h2 class="text_top_heading">Whitespace and Line Breaks</h2>
+            <p>
+              JavaScript ignores spaces, tabs, and newlines that appear in JavaScript programs. You can use spaces, tabs, and
+              newlines freely in your program and you are free to format and indent your programs in a neat and consistent
+              way that makes the code easy to read and understand.
+            </p>
+            <hr />
+            <h2 class="text_top_heading">Case Sensitivity</h2>
+            <p>
+              JavaScript is a case-sensitive language. This means that the language keywords, variables, function names, and
+              any other identifiers must always be typed with a consistent capitalization of letters.<br />
+              So the identifiers <strong>Time</strong> and <strong>TIME</strong> will convey different meanings in
+              JavaScript.
+            </p>
+
+            <div class="note">
+              <p><strong>Note:</strong> Care should be taken while writing variable and function names in JavaScript.</p>
+            </div>
+            <hr />
+            <h2 class="text_top_heading">Comments in JavaScript</h2>
+            <p>JavaScript supports both <strong>C-style</strong> and <strong>C++ style</strong> comments, Thus</p>
+            <ul>
+              <li>Any text between a // and the end of a line is treated as a comment and is ignored by JavaScript.</li>
+              <li>Any text between the characters /* and */ is treated as a comment. This may span multiple lines.</li>
+              <li>
+                JavaScript also recognizes the HTML comment opening sequence &lt;!--. JavaScript treats this as a single-line
+                comment, just as it does the // comment.
+              </li>
+              <li>
+                The HTML comment closing sequence --&gt; is not recognized by JavaScript so it should be written as //--&gt;.
+              </li>
+            </ul>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <<span style="color: red">script</span> <span style="color: brown">language = </span>"javascript" ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span> &lt;!--</span><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//This is a comment.It is similar to
+                comments in C++.<br /><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* This is a multi-line comment.<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* It is similar to comments in C
+                programming.<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span> //--&gt;</span><br />
+                <<span style="color: red">/script</span>><br />
+              </div>
+              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
+            </div>
+            <hr />
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
+          <section class="bodys" id="js_variables" style="display: none">
+            <h1 class="top_heading">JavaScript Variables</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('js_variables')"
+                >&#10094; Previous</a
+              >
+              <a
+                class="example_button"
+                id="button_next"
+                style="justify-self: right"
+                onclick="cssSection_next('js_variables')"
+                >Next &#10095;</a
+              >
+            </div>
+            <hr />
+            <p class="intro">Variables are containers for storing data (storing data values).</p>
+            <hr />
+            <p>
+              Like many other programming languages, JavaScript has variables. Variables can be thought of as named
+              containers. You can place data into these containers and then refer to the data simply by naming the
+              container.<br />
+              Before you use a variable in a JavaScript program, you must declare it. Ways to declare a variable are:
+            </p>
+            <ul>
+              <li>Using <code class="codespan">var</code></li>
+              <li>Using <code class="codespan">let</code></li>
+              <li>Using <code class="codespan">const</code></li>
+            </ul>
+            <p>Let's understand the syntax and description of the above ways in detail.</p>
+            <hr />
+            <h2 class="text_top_heading">When to Use JavaScript <code class="codespan">var</code> ?</h2>
+            <p>
+              The <code class="codespan">var</code> keyword is used in all JavaScript code from 1995 to 2015. <br />
+              The <code class="codespan">let</code> and <code class="codespan">const</code> keywords were added to JavaScript
+              in 2015.<br />
+              If you want your code to run in older browsers, you must use <code class="codespan">var</code>.
+            </p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">var</span>&nbsp;x = <span style="color: brown">1</span>;<br />
+                <span style="color: red">var</span>&nbsp;y = <span style="color: brown">5</span>;<br />
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">When to Use JavaScript <code class="codespan">const</code> ?</h2>
+            <p>If you want a general rule: always declare variables with <code class="codespan">const</code>.<br /></p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">const</span>&nbsp;value1 = <span style="color: brown">1</span>;<br />
+                <span style="color: red">const</span>&nbsp;value2 = <span style="color: brown">5</span>;<br />
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">When to Use JavaScript <code class="codespan">let</code> ?</h2>
+            <p>If you think the value of the variable can change, use <code class="codespan">let</code>.<br /></p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">let</span>&nbsp;a = <span style="color: brown">1</span>;<br />
+                <span style="color: red">let</span>&nbsp;b = <span style="color: brown">5</span>;<br />
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">JavaScript Variable Names</h2>
+            <p>While naming your variables in JavaScript, keep the following rules in mind :<br /></p>
+
+            <ul>
+              <li>
+                You should not use any of the JavaScript reserved keywords as a variable name. These keywords are mentioned
+                in the next section.<br />
+                For example, <strong>break</strong> or <strong>boolean</strong> variable names are not valid.
+              </li>
+              <li>
+                JavaScript variable names should not start with a numeral (0-9). They must begin with a letter or an
+                underscore character.<br />
+                For example, <strong>123test</strong> is an invalid variable name but <strong>_123test</strong> is a valid
+                one.
+              </li>
+              <li>
+                JavaScript variable names are case-sensitive.<br />
+                For example, <strong>Name</strong> and <strong>name</strong> are two different variables.
+              </li>
+            </ul>
+
+            <hr />
+            <h2 class="text_top_heading">JavaScript Reserved Words</h2>
+            <p>
+              A list of all the reserved words in JavaScript are given in the following table. They cannot be used as
+              JavaScript variables, functions, methods, loop labels, or any object names.
+            </p>
+
+            <div class="example" style="padding: 10px">
+              <table id="example_table">
+                <tbody class="example_content">
+                  <tr>
+                    <td>abstract</td>
+                    <td>else</td>
+                    <td>instanceof</td>
+                    <td>switch</td>
+                  </tr>
+                  <tr>
+                    <td>boolean</td>
+                    <td>enum</td>
+                    <td>int</td>
+                    <td>synchronized</td>
+                  </tr>
+                  <tr>
+                    <td>break</td>
+                    <td>export</td>
+                    <td>interface</td>
+                    <td>this</td>
+                  </tr>
+                  <tr>
+                    <td>byte</td>
+                    <td>extends</td>
+                    <td>long</td>
+                    <td>throw</td>
+                  </tr>
+                  <tr>
+                    <td>case</td>
+                    <td>false</td>
+                    <td>native</td>
+                    <td>throws</td>
+                  </tr>
+                  <tr>
+                    <td>catch</td>
+                    <td>final</td>
+                    <td>new</td>
+                    <td>transient</td>
+                  </tr>
+                  <tr>
+                    <td>char</td>
+                    <td>finally</td>
+                    <td>null</td>
+                    <td>true</td>
+                  </tr>
+                  <tr>
+                    <td>class</td>
+                    <td>float</td>
+                    <td>package</td>
+                    <td>try</td>
+                  </tr>
+                  <tr>
+                    <td>const</td>
+                    <td>for</td>
+                    <td>private</td>
+                    <td>typeof</td>
+                  </tr>
+                  <tr>
+                    <td>continue</td>
+                    <td>function</td>
+                    <td>protected</td>
+                    <td>var</td>
+                  </tr>
+                  <tr>
+                    <td>debugger</td>
+                    <td>goto</td>
+                    <td>public</td>
+                    <td>void</td>
+                  </tr>
+                  <tr>
+                    <td>default</td>
+                    <td>if</td>
+                    <td>return</td>
+                    <td>volatile</td>
+                  </tr>
+                  <tr>
+                    <td>delete</td>
+                    <td>implements</td>
+                    <td>short</td>
+                    <td>while</td>
+                  </tr>
+                  <tr>
+                    <td>do</td>
+                    <td>import</td>
+                    <td>static</td>
+                    <td>with</td>
+                  </tr>
+                  <tr>
+                    <td>double</td>
+                    <td>in</td>
+                    <td>super</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <hr />
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
+          <section class="bodys" id="js_operators" style="display: none">
+            <h1 class="top_heading">JavaScript Operators</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('js_operators')"
+                >&#10094; Previous</a
+              >
+              <a
+                class="example_button"
+                id="button_next"
+                style="justify-self: right"
+                onclick="cssSection_next('js_operators')"
+                >Next &#10095;</a
+              >
+            </div>
+            <hr />
+            <p class="intro">
+              An Operator is a character that represents a specific mathematical or logical action or process.
+            </p>
+            <hr />
+
+            <p>JavaScript supports the following types of operators :</p>
+            <ul>
+              <li>Arithmetic Operators</li>
+              <li>Comparison Operatorsr</li>
+              <li>Logical (or Relational) Operators</li>
+              <li>Assignment Operators</li>
+              <li>Conditional (or ternary) Operators</li>
+            </ul>
+
+            <hr />
+            <h2>Arithmetic Operators</h2>
+            <p>JavaScript supports the following arithmetic operators :</p>
+
+            <div class="example" style="padding: 5px">
+              <table class="example_content" id="operator_table">
+                <tbody>
+                  <tr>
+                    <th style="width: 9%">Sr.No.</th>
+                    <th style="text-align: center">Operator &amp; Description</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <p><b>+ (Addition)</b></p>
+                      <p>Adds two operands</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <p><b>- (Subtraction)</b></p>
+                      <p>Subtracts the second operand from the first</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <p><b>* (Multiplication)</b></p>
+                      <p>Multiply both operands</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <p><b>/ (Division)</b></p>
+                      <p>Divide the numerator by the denominator</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <p><b>% (Modulus)</b></p>
+                      <p>Outputs the remainder of an integer div</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <p><b>++ (Increment)</b></p>
+                      <p>Increases an integer value by one</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <p><b>-- (Decrement)</b></p>
+                      <p>Decreases an integer value by one</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <hr />
+            <h2>Comparison Operators</h2>
+            <p>JavaScript supports the following comparison operators :</p>
+
+            <div class="example" style="padding: 5px">
+              <table class="example_content" id="operator_table">
+                <tbody>
+                  <tr>
+                    <th>Sr.No.</th>
+                    <th>Operator &amp; Description</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <p><b>= = (Equal)</b></p>
+                      <p>Checks if the value of two operands are equal or not, if yes, then the condition becomes true.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <p><b>!= (Not Equal)</b></p>
+                      <p>
+                        Checks if the value of two operands are equal or not, if the values are not equal, then the condition
+                        becomes true.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <p><b>&gt; (Greater than)</b></p>
+                      <p>
+                        Checks if the value of the left operand is greater than the value of the right operand, if yes, then
+                        the condition becomes true.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <p><b>&lt; (Less than)</b></p>
+                      <p>
+                        Checks if the value of the left operand is less than the value of the right operand, if yes, then the
+                        condition becomes true.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <p><b>&gt;= (Greater than or Equal to)</b></p>
+                      <p>
+                        Checks if the value of the left operand is greater than or equal to the value of the right operand,
+                        if yes, then the condition becomes true.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <p><b>&lt;= (Less than or Equal to)</b></p>
+                      <p>
+                        Checks if the value of the left operand is less than or equal to the value of the right operand, if
+                        yes, then the condition becomes true.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr />
+
+            <h2>Logical Operators</h2>
+            <p>JavaScript supports the following logical operators :</p>
+
+            <div class="example" style="padding: 5px">
+              <table class="example_content" id="operator_table">
+                <tbody>
+                  <tr>
+                    <th>Sr.No.</th>
+                    <th>Operator &amp; Description</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <p><b>&amp;&amp; (Logical AND)</b></p>
+                      <p>If both the operands are non-zero, then the condition becomes true.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <p><b>|| (Logical OR)</b></p>
+                      <p>If any of the two operands are non-zero, then the condition becomes true.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <p><b>! (Logical NOT)</b></p>
+                      <p>
+                        Reverses the logical state of its operand. If a condition is true, then the Logical NOT operator will
+                        make it false.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <hr />
+            <h2>Assignment Operators</h2>
+            <p>JavaScript supports the following Assignment Operators :</p>
+
+            <div class="example" style="padding: 5px">
+              <table class="example_content" id="operator_table">
+                <tbody>
+                  <tr>
+                    <th>Sr.No.</th>
+                    <th>Operator &amp; Description</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <p><b>= (Simple Assignment )</b></p>
+                      <p>Assigns values from the right side operand to the left side operand</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <p><b>+= (Add and Assignment)</b></p>
+                      <p>It adds the right operand to the left operand and assigns the result to the left operand.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <p><b>−= (Subtract and Assignment)</b></p>
+                      <p>It subtracts the right operand from the left operand and assigns the result to the left operand.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <p><b>*= (Multiply and Assignment)</b></p>
+                      <p>
+                        It multiplies the right operand with the left operand and assigns the result to the left operand.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <p><b>/= (Divide and Assignment)</b></p>
+                      <p>It divides the left operand with the right operand and assigns the result to the left operand.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <p><b>%= (Modules and Assignment)</b></p>
+                      <p>It takes modulus using two operands and assigns the result to the left operand.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr />
+            <h2>Logical Operators</h2>
+            <p>JavaScript supports the following logical operators :</p>
+
+            <div class="example" style="padding: 5px">
+              <table class="example_content" id="operator_table">
+                <tbody>
+                  <tr>
+                    <th style="text-align: center" width="10%">Sr.No.</th>
+                    <th style="text-align: center">Operator and Description</th>
+                  </tr>
+                  <tr>
+                    <td class="ts">1</td>
+                    <td>
+                      <p><b>? : (Conditional )</b></p>
+                      <p>If Condition is true? Then value X : Otherwise value Y</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <hr />
+
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
+          <section class="bodys" id="js_functions" style="display: block">
+            <h1 class="top_heading">JavaScript Functions</h1>
+            <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
+              <a
+                class="example_button"
+                id="button_previous"
+                style="display: inline-block"
+                onclick="cssSection_previous('js_functions')"
+                >&#10094; Previous</a
+              >
+              <a
+                class="example_button"
+                id="button_next"
+                style="justify-self: right"
+                onclick="cssSection_next('js_functions')"
+                >Next &#10095;</a
+              >
+            </div>
+            <hr />
+            <p class="intro">A function is a group of reusable code which can be called anywhere in your program.</p>
+            <hr />
+            <p>
+              This eliminates the need of writing the same code again and again. It helps programmers in writing modular
+              codes. Functions allow a programmer to divide a big program into a number of small and manageable functions.<br />
+              Like any other advanced programming language, JavaScript also supports all the features necessary to write
+              modular code using functions.<br />
+              JavaScript allows us to write our own functions as well. This section explains how to write your own functions
+              in JavaScript.
+            </p>
+
+            <hr />
+            <h2 class="text_top_heading">Syntax</h2>
+            <p>
+              Before we use a function, we need to define it. The most common way to define a function in JavaScript is by
+              using the <code class="codespan">function</code> keyword, followed by a unique function name, a list of
+              parameters (that might be empty), and a statement block surrounded by curly braces.
+            </p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <<span style="color: red">script</span> <span style="color: brown">language = </span>"javascript" ><br />
+                <br />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function functionName
+                (parameter-list) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+                <<span style="color: red">/script</span>><br />
+              </div>
+              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">Function Invocation</h2>
+            <p>
+              The code inside the function will execute when "something" <strong>invokes</strong> (calls) the function :<br />
+            </p>
+            <ul>
+              <li>When an event occurs (when a user clicks a button)</li>
+              <li>When it is invoked (called) from JavaScript code</li>
+              <li>Automatically (self invoked)</li>
+            </ul>
+
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">function</span> addition (x,y) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">return</span> x+y;<br />
+                }<br /><br />
+                document.getElementById(<span style="color: brown">"this"</span>).innerHTML = addition(5,6);
+              </div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+            <h2 class="text_top_heading">Function Return</h2>
+            <p>
+              When JavaScript reaches a <code class="codespan">return</code> statement, the function will stop executing.<br />
+              If the function was invoked from a statement, JavaScript will "<strong>return</strong>" to execute the code
+              after the invoking statement.<br />
+              Functions often compute a return value. The return value is "<strong>returned</strong>" back to the
+              "<strong>caller</strong>".
+            </p>
+            <div class="example">
+              <h3 class="example_title">Example</h3>
+              <div class="example_content">
+                <span style="color: red">function</span> addition (x,y) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">return</span> x+y;<br />
+                }<br /><br />
+                <span style="color: red">let</span> i = <span style="color: brown">addition</span>(4,7);
+              </div>
+              <h3 class="example_title">Result</h3>
+              <div class="example_content"><span style="color: red">i</span> = 11</div>
+              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+                >Try it Yourself &raquo;</a
+              >
+            </div>
+
+            <hr />
+
+            <button id="html-quiz ">Take Quiz</button>
+          </section>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2023 Web Tutorial</p>
+    </footer>
+  </body>
+</html>

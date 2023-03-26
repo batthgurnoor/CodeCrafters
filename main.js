@@ -1,5 +1,4 @@
-/* // HTML quiz */ const htmlQuizButton = document.getElementById("html-quiz");
-const htmlQuizContainer = document.getElementById("html-quiz-container");
+/* // HTML quiz */ const htmlQuizButton = document.getElementById("html-quiz");const htmlQuizContainer = document.getElementById("html-quiz-container");
 const htmlQuizForm = document.getElementById("html-quiz-form");
 const htmlQuizScore = document.getElementById("html-quiz-score");
 const htmlQuizQuestions = [
@@ -102,16 +101,6 @@ function navbar(toggle) {
     x.style.opacity = 0;
     x.style.height = 0;
   }
-
-  var a = document.getElementById("down");
-  var b = document.getElementById("up");
-  if (a.style.display == "inline") {
-    a.style.display = "none";
-    b.style.display = "inline";
-  } else {
-    a.style.display = "inline";
-    b.style.display = "none";
-  }
 }
 
 function check() {
@@ -178,6 +167,7 @@ function display_section(toggle) {
     item.style.display = "none";
   }
   document.getElementById(toggle).style.display = "block";
+  check();
 }
 
 function display_nav(toggle) {
