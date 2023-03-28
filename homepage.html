@@ -12,105 +12,117 @@
 </head>
 <body>
     <header>
-        <div id="logo_container"><a href="homepage.html"><img src="Logo.png" alt="logo" ></a></div>
-        <div class="topnav" id="myTopnav">
-          <a href="homepage.html">Home</a>
-            <div class="dropdown" onclick="navbar('thatone')" >
-              <a class="dropbtn">Tutorials 
-                <i id="down" class="fa fa-caret-down"></i>
-                <i id="up" class="fa-solid fa-caret-up" ></i>
-              </a>
-              <div id="thatone" class="dropdown-content">
-                <div class="dropdown-container">
-                  <div >
-                      <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
-                  </div>
-                  <div style="display: flex;flex-direction: row;">
-                      <div class="topic-container" style="flex: 33%;">
-                          <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                          <a href="html_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction</a>
-                          <a href="html_course.html#basics"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics</a>
-                          <a href="html_course.html#attribures"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes</a>
-                          <a href="html_course.html#headings"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings</a>
-                          <a href="html_course.html#ids"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Ids</a>
-                          <a href="html_course.html#classes"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Classes</a>
-                          <a href="html_course.html#paragraphs"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Paragraphs</a>
-                      </div>
-                      <div class="topic-container" style="flex: 33%;">
-                          <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                          <a href="css_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax</a>
-                          <a href="css_course.html#colors"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors</a>
-                          <a href="css_course.html#backgrounds"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Backgrounds</a>
-                          <a href="css_course.html#borders"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders</a>
-                          <a href="css_course.html#margins"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Margins</a>
-                          <a href="css_course.html#texts"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Text</a>
-                          <a href="css_course.html#fonts"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Fonts</a>
-                          <a href="css_course.html#displays"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Display</a>
-                          <a href="css_course.html#aligns"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Align</a>
-                      </div>
-                      <div class="topic-container" style="flex: 33%;">
-                          <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                          <a href="javascript_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction</a>
-                          <a href="javascript_course.html#statements"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Statements</a>
-                          <a href="javascript_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax</a>
-                          <a href="javascript_course.html#variables"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables</a>
-                          <a href="javascript_course.html#lets"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS LET</a>
-                          <a href="javascript_course.html#constants"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS CONST</a>
-                      </div>
-                  </div>
-                  </div>
+      <div id="logo_container" onclick="check()">
+        <a href="homepage.html"><img src="Logo.png" alt="logo" /></a>
+      </div>
+      <div class="topnav" id="myTopnav">
+        <a href="homepage.html">Home</a>
+        <div class="dropdown">
+          <a class="dropbtn" onclick="navbar('thatone')">Tutorials </a>
+          <div id="thatone" class="dropdown-content">
+            <div class="dropdown-container">
+              <div>
+                <h1 class="dropdown-heading-main"><i class="fa-solid fa-book"></i>&nbsp;Tutorials</h1>
               </div>
-            </div>
-            <div class="dropdown" onclick="navbar('thisone')">
-                <a class="dropbtn" >Exercises 
-                  <i id="down" class="fa fa-caret-down"></i>
-                  <i id="up" class="fa-solid fa-caret-up" ></i>
-                </a>
-                <div id="thisone" class="dropdown-content">
-                    <div  class="dropdown-container" ">
-                    <div>
-                        <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
+              <div style="display: flex; flex-direction: row">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
+                  <a onclick="display_nav('html_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction
+                  </a>
+                  <a onclick="display_nav('html_basics')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributes')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headings')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
+                </div>
+                <div class="topic-container" id="css_nav" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
+                  <a onclick="display_nav('css_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Introduction
+                  </a>
+                  <a onclick="display_nav('css_syntax')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('css_colors')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
 
-                    </div>
-                    <div style="display: flex;flex-direction: row;">
-                      <div class="topic-container" style="flex: 33%;">
-                          <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                          <a href="html_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
-                          <a href="html_course.html#basics"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
-                          <a href="html_course.html#attribures"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
-                      </div>
-                      <div class="topic-container" style="flex: 33%;">
-                          <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                          <a href="css_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                          <a href="css_course.html#colors"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                          <a href="css_course.html#backgrounds"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                          <a href="css_course.html#borders"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
-                          
-                      </div>
-                      <div class="topic-container" style="flex: 33%;">
-                          <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                          <a href="javascript_course.html#intro"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                          <a href="javascript_course.html#statements"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                          <a href="javascript_course.html#syntax"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                          <a href="javascript_course.html#variables"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
-                          <a href="javascript_course.html#lets"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
-                          <a href="javascript_course.html#constants"><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a>
-                      </div>
-                  </div>
-                    </div>
-                  
+                  <a onclick="display_nav('css_borders')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
+                </div>
+                <div class="topic-container" id="js_nav" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
+                  <a onclick="display_nav('js_intro')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Introduction
+                  </a>
+                  <a onclick="display_nav('js_syntax')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
+                  <a onclick="display_nav('js_variables')"
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('js_operators')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators
+                  </a>
+                  <a onclick="display_nav('js_functions')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+                  </a>
                 </div>
               </div>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
-            <svg style="height:50px;width:100%" viewBox="0 11 100 9" preserveAspectRatio="none">
-              <path fill="#2C3333" stroke="#2C3333" d="M0 15
-                       C 20 8, 30 22, 50 15
-                       C 70 8, 80 22, 110 15
-                       L 110 10, 0 10 Z"></path>
-            </svg>
-            
-      </header>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="dropbtn" onclick="navbar('thisone')">Exercises </a>
+          <div id="thisone" class="dropdown-content">
+            <div class="dropdown-container">
+              <div>
+                <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
+              </div>
+              <div style="display: flex; flex-direction: row">
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
+                  <a href="html_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
+                  <a href="html_course.html#basics "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
+                  <a href="html_course.html#attribures "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
+                  <a href="css_course.html#syntax "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
+                  <a href="css_course.html#colors "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
+                  <a href="css_course.html#backgrounds "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
+                  <a href="css_course.html#borders "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
+                </div>
+                <div class="topic-container" style="flex: 33%">
+                  <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
+                  <a href="javascript_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
+                  <a href="javascript_course.html#statements "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a
+                  >
+                  <a href="javascript_course.html#syntax "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a
+                  >
+                  <a href="javascript_course.html#variables "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a
+                  >
+                  <a href="javascript_course.html#lets "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
+                  <a href="javascript_course.html#constants "
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0); " style="font-size: 15px" class="icon" onclick="myFunction() ">&#9776;</a>
+      </div>
+    </header>
       <main>
         <div class="intro">
           <h1>Learn Web Development with US!</h1>
@@ -255,7 +267,6 @@
               <a class="code-tryit-button" href="https://www.w3schools.com/css/tryit.asp?filename=trycss_default" target="_blank" class="w3-button tryit-button">Try it Yourself</a>
             </div>
           </div>
-           
           </div>
           <div id="css_course-card" class="course-card">
             <svg style="height:50px;width:100%;" viewBox="0 11 100 9" preserveAspectRatio="none">
@@ -326,7 +337,7 @@
               </div>
               <a class="code-tryit-button" href="/css/tryit.asp?filename=trycss_default" target="_blank" class="w3-button tryit-button">Try it Yourself</a>
             </div>
-          </div>
+            </div>
           </div>
           
           <div id="js_course-card"class="course-card">
