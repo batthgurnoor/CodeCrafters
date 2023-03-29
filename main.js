@@ -1,4 +1,5 @@
-/* // HTML quiz */ const htmlOverallQuestions = [  {
+/* // HTML quiz */ const htmlOverallQuestions = [
+  {
     question: "Which HTML attribute is used to specify the URL of the page that the hyperlink goes to?",
     choices: [
       { text: "href", correct: true },
@@ -472,6 +473,287 @@ const cssQuizQuestions = [
   },
 ];
 
+const jsSyntaxQuestions = [
+  {
+    question: "What is the correct syntax for declaring a variable in JavaScript?",
+    choices: [
+      { text: "variable = 'value';", correct: false },
+      { text: "var variable = 'value';", correct: true },
+      { text: "variable : 'value';", correct: false },
+      { text: "var = 'value';", correct: false },
+    ],
+  },
+  {
+    question: "What is the correct syntax for a comment in JavaScript?",
+    choices: [
+      { text: "// This is a comment", correct: true },
+      { text: "<!-- This is a comment -->", correct: false },
+      { text: "/* This is a comment */", correct: true },
+      { text: "' This is a comment", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used to compare two values for equality in JavaScript?",
+    choices: [
+      { text: "==", correct: true },
+      { text: "=", correct: false },
+      { text: "===", correct: false },
+      { text: "!=", correct: false },
+    ],
+  },
+  {
+    question: "What is the correct syntax for a function declaration in JavaScript?",
+    choices: [
+      { text: "functionName()", correct: false },
+      { text: "function functionName()", correct: true },
+      { text: "functionName = function()", correct: false },
+      { text: "function = functionName()", correct: false },
+    ],
+  },
+  {
+    question: "What is the correct way to add an event listener to an HTML element using JavaScript?",
+    choices: [
+      { text: "element.addEventListener('click', myFunction)", correct: true },
+      { text: "element.onclick = myFunction", correct: false },
+      { text: "element.addEvent('click', myFunction)", correct: false },
+      { text: "element.listener('click', myFunction)", correct: false },
+    ],
+  },
+];
+const jsVariablesQuestions = [
+  {
+    question: "What is the keyword used to declare a variable in JavaScript?",
+    choices: [
+      { text: "let", correct: true },
+      { text: "var", correct: true },
+      { text: "const", correct: true },
+      { text: "variable", correct: false },
+    ],
+  },
+  {
+    question: "What is the scope of a variable declared with the 'let' keyword?",
+    choices: [
+      { text: "Global scope", correct: false },
+      { text: "Local scope", correct: true },
+      { text: "Function scope", correct: false },
+      { text: "Block scope", correct: true },
+    ],
+  },
+  {
+    question: "What is the scope of a variable declared with the 'var' keyword?",
+    choices: [
+      { text: "Global scope", correct: true },
+      { text: "Local scope", correct: false },
+      { text: "Function scope", correct: true },
+      { text: "Block scope", correct: false },
+    ],
+  },
+  {
+    question: "What is the keyword used to declare a constant variable in JavaScript?",
+    choices: [
+      { text: "let", correct: false },
+      { text: "var", correct: false },
+      { text: "const", correct: true },
+      { text: "variable", correct: false },
+    ],
+  },
+  {
+    question: "What is the difference between declaring a variable with 'let' and 'var'?",
+    choices: [
+      { text: "'let' variables have block scope, while 'var' variables have function scope.", correct: true },
+      { text: "'let' variables have function scope, while 'var' variables have block scope.", correct: false },
+      { text: "'let' variables can be reassigned, while 'var' variables cannot.", correct: false },
+      { text: "'let' variables are always global, while 'var' variables are always local.", correct: false },
+    ],
+  },
+];
+const jsOperatorsQuestions = [
+  {
+    question: "Which operator is used to assign a value to a variable in JavaScript?",
+    choices: [
+      { text: "=", correct: true },
+      { text: "==", correct: false },
+      { text: "===", correct: false },
+      { text: ":=", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used to compare the values and data types of two variables in JavaScript?",
+    choices: [
+      { text: "==", correct: false },
+      { text: "===", correct: true },
+      { text: "!=", correct: false },
+      { text: "!==", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used to add two numbers in JavaScript?",
+    choices: [
+      { text: "+", correct: true },
+      { text: "-", correct: false },
+      { text: "*", correct: false },
+      { text: "/", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used to concatenate two strings in JavaScript?",
+    choices: [
+      { text: "+", correct: true },
+      { text: "-", correct: false },
+      { text: "*", correct: false },
+      { text: "/", correct: false },
+    ],
+  },
+  {
+    question: "Which operator is used to increment a variable in JavaScript?",
+    choices: [
+      { text: "++", correct: true },
+      { text: "+=", correct: false },
+      { text: "--", correct: false },
+      { text: "-=", correct: false },
+    ],
+  },
+];
+const jsFunctionsQuestions = [
+  {
+    question: "What is the keyword used to declare a function in JavaScript?",
+    choices: [
+      { text: "function", correct: true },
+      { text: "declare", correct: false },
+      { text: "def", correct: false },
+      { text: "func", correct: false },
+    ],
+  },
+  {
+    question: "What is the syntax for calling a function in JavaScript?",
+    choices: [
+      { text: "functionName()", correct: true },
+      { text: "functionName[]", correct: false },
+      { text: "functionName{}", correct: false },
+      { text: "functionName", correct: false },
+    ],
+  },
+  {
+    question: "What is the purpose of a return statement in a JavaScript function?",
+    choices: [
+      { text: "To return a value to the caller of the function", correct: true },
+      { text: "To stop the execution of the function", correct: false },
+      { text: "To declare a variable inside the function", correct: false },
+      { text: "To console.log() the output of the function", correct: false },
+    ],
+  },
+  {
+    question: "What is a parameter in a JavaScript function?",
+    choices: [
+      { text: "A variable that holds an argument passed into the function.", correct: true },
+      { text: "A keyword used to declare a variable in a function.", correct: false },
+      { text: "A value that is returned by the function.", correct: false },
+      { text: "A block of code that is executed when the function is called.", correct: false },
+    ],
+  },
+  {
+    question: "What is the purpose of the 'this' keyword in a JavaScript function?",
+    choices: [
+      { text: "To refer to the object that the function is a method of", correct: true },
+      { text: "To create a new instance of the object", correct: false },
+      { text: "To return a value to the caller of the function", correct: false },
+      { text: "To stop the execution of the function", correct: false },
+    ],
+  },
+];
+const jsQuizQuestions = [
+  {
+    question: "What is the syntax for declaring a variable in JavaScript?",
+    choices: [
+      { text: "var x;", correct: true },
+      { text: "variable x;", correct: false },
+      { text: "x = 5;", correct: false },
+      { text: "int x;", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is NOT a valid JavaScript operator?",
+    choices: [
+      { text: "<>", correct: true },
+      { text: "+", correct: false },
+      { text: "*", correct: false },
+      { text: "-", correct: false },
+    ],
+  },
+  {
+    question: "What is the keyword used to define a function in JavaScript?",
+    choices: [
+      { text: "function", correct: true },
+      { text: "define", correct: false },
+      { text: "var", correct: false },
+      { text: "class", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of the following code: console.log(2 + '2')",
+    choices: [
+      { text: "22", correct: true },
+      { text: "4", correct: false },
+      { text: "NaN", correct: false },
+      { text: "undefined", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is the correct way to declare a function named 'myFunction' in JavaScript?",
+    choices: [
+      { text: "function myFunction() {}", correct: true },
+      { text: "var myFunction() = {}", correct: false },
+      { text: "myFunction = function() {}", correct: false },
+      { text: "myFunction() {}", correct: false },
+    ],
+  },
+  {
+    question: "What is the keyword used to declare a variable with block scope in JavaScript?",
+    choices: [
+      { text: "let", correct: true },
+      { text: "var", correct: false },
+      { text: "const", correct: false },
+      { text: "block", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of the following code: console.log(typeof true)",
+    choices: [
+      { text: "boolean", correct: true },
+      { text: "string", correct: false },
+      { text: "number", correct: false },
+      { text: "undefined", correct: false },
+    ],
+  },
+  {
+    question: "What is the output of the following code: console.log('5' + 5)",
+    choices: [
+      { text: "55", correct: true },
+      { text: "10", correct: false },
+      { text: "NaN", correct: false },
+      { text: "undefined", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is NOT a valid way to declare a variable in JavaScript?",
+    choices: [
+      { text: "var x = 5;", correct: false },
+      { text: "let y = 'hello';", correct: false },
+      { text: "const z;", correct: true },
+      { text: "var a = true;", correct: false },
+    ],
+  },
+  {
+    question: "What is the keyword used to exit a function in JavaScript?",
+    choices: [
+      { text: "return", correct: true },
+      { text: "exit", correct: false },
+      { text: "break", correct: false },
+      { text: "continue", correct: false },
+    ],
+  },
+];
+
 function checkScore(event) {
   event.preventDefault();
   var questions = 0;
@@ -479,35 +761,43 @@ function checkScore(event) {
   switch (toggle) {
     case "html_basicsQuiz":
       questions = htmlBasicQuestions;
-      console.log(toggle);
       break;
     case "html_attributesQuiz":
       questions = htmlAttributeQuestions;
-      console.log(toggle);
       break;
     case "html_headingsQuiz":
       questions = htmlHeadingQuestions;
-      console.log(toggle);
       break;
     case "html_overallQuiz":
       questions = htmlOverallQuestions;
-      console.log(toggle);
       break;
     case "css_syntaxQuiz":
       questions = cssSyntaxQuestions;
-      console.log(toggle);
       break;
     case "css_colorsQuiz":
       questions = cssColorQuestions;
-      console.log(toggle);
       break;
     case "css_bordersQuiz":
       questions = cssBorderQuestions;
-      console.log(toggle);
+      break;
+    case "css_overallQuiz":
+      questions = cssQuizQuestions;
+      break;
+    case "js_syntaxQuiz":
+      questions = jsSyntaxQuestions;
+      break;
+    case "js_variablesQuiz":
+      questions = jsVariablesQuestions;
+      break;
+    case "js_operatorsQuiz":
+      questions = jsOperatorsQuestions;
+      break;
+    case "js_functionsQuiz":
+      questions = jsFunctionsQuestions;
       break;
     default:
-      questions = cssQuizQuestions;
-      console.log(toggle);
+      questions = jsQuizQuestions;
+
       break;
   }
   var score = 0;
@@ -550,6 +840,13 @@ function showScore(percentage, toggle) {
       case "css_bordersQuiz":
       case "css_overallQuiz":
         display_nav("css_intro");
+        break;
+      case "js_syntaxQuiz":
+      case "js_variablesQuiz":
+      case "js_operatorsQuiz":
+      case "js_functionsQuiz":
+      case "js_overallQuiz":
+        display_nav("js_intro");
         break;
     }
   }

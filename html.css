@@ -119,3 +119,23 @@ a {
   position: relative;
   left: 40%;
 }
+
+.quizList > li > label {
+  transition: 0.3s;
+}
+.quizList > li > label:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+
+  background-color: #40c0c9;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 10px 5px 5px;
+  padding-right: 10px;
+}
+input[type="radio"] {
+  margin-bottom: 10px;
+}
+input[type="radio"]:hover {
+  transform: scale(1.2);
+}
