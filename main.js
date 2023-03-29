@@ -235,6 +235,243 @@ const htmlHeadingQuestions = [
   },
 ];
 
+const cssSyntaxQuestions = [
+  {
+    question: "What does CSS stand for?",
+    choices: [
+      { text: "Cascading Style Sheets", correct: true },
+      { text: "Computer Style Sheets", correct: false },
+      { text: "Creative Style Sheets", correct: false },
+      { text: "Cursive Style Sheets", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid CSS property?",
+    choices: [
+      { text: "font-style", correct: true },
+      { text: "text-color", correct: false },
+      { text: "background-image", correct: true },
+      { text: "border-shadow", correct: false },
+    ],
+  },
+  {
+    question: "How do you select an element with an ID in CSS?",
+    choices: [
+      { text: "#elementID", correct: true },
+      { text: ".elementID", correct: false },
+      { text: "*elementID", correct: false },
+      { text: "<elementID>", correct: false },
+    ],
+  },
+  {
+    question: "How do you select all paragraph elements on a page in CSS?",
+    choices: [
+      { text: "p", correct: true },
+      { text: "para", correct: false },
+      { text: "p.all", correct: false },
+      { text: "paragraph", correct: false },
+    ],
+  },
+  {
+    question: "How do you apply CSS to an HTML document?",
+    choices: [
+      { text: "Using the <style> tag in the <head> section of the HTML document", correct: true },
+      { text: "Using the <link> tag in the <body> section of the HTML document", correct: false },
+      { text: "Using the <script> tag in the <head> section of the HTML document", correct: false },
+      { text: "Using the <css> tag in the <head> section of the HTML document", correct: false },
+    ],
+  },
+];
+
+const cssColorQuestions = [
+  {
+    question: "Which of the following is NOT a valid color keyword in CSS?",
+    choices: [
+      { text: "red", correct: false },
+      { text: "purple", correct: false },
+      { text: "turquoise", correct: false },
+      { text: "hamburger", correct: true },
+    ],
+  },
+  {
+    question: "What is the hexadecimal value for the color white in CSS?",
+    choices: [
+      { text: "#FFFFFF", correct: true },
+      { text: "#000000", correct: false },
+      { text: "#00FF00", correct: false },
+      { text: "#0000FF", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to set the background color of an element to blue?",
+    choices: [
+      { text: "background-color: blue", correct: true },
+      { text: "background-color: #0000FF", correct: true },
+      { text: "background: blue", correct: false },
+      { text: "color: blue", correct: false },
+    ],
+  },
+  {
+    question: "What is the RGB value for the color magenta?",
+    choices: [
+      { text: "rgb(255, 0, 255)", correct: true },
+      { text: "rgb(255, 255, 0)", correct: false },
+      { text: "rgb(0, 255, 255)", correct: false },
+      { text: "rgb(128, 0, 128)", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to set the text color of an element to red?",
+    choices: [
+      { text: "text-color: red", correct: false },
+      { text: "color: red", correct: true },
+      { text: "font-color: red", correct: false },
+      { text: "background-color: red", correct: false },
+    ],
+  },
+];
+
+const cssBorderQuestions = [
+  {
+    question: "Which of the following is NOT a valid border style in CSS?",
+    choices: [
+      { text: "solid", correct: false },
+      { text: "groove", correct: false },
+      { text: "zigzag", correct: true },
+      { text: "dotted", correct: false },
+    ],
+  },
+  {
+    question: "What is the default color of a border in CSS?",
+    choices: [
+      { text: "black", correct: true },
+      { text: "white", correct: false },
+      { text: "gray", correct: false },
+      { text: "transparent", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to set the border width of an element to 5 pixels?",
+    choices: [
+      { text: "border: 5", correct: false },
+      { text: "border-width: 5px", correct: true },
+      { text: "border-size: 5", correct: false },
+      { text: "border-thickness: 5px", correct: false },
+    ],
+  },
+  {
+    question: "What is the default value for the border-style property in CSS?",
+    choices: [
+      { text: "none", correct: false },
+      { text: "hidden", correct: false },
+      { text: "solid", correct: true },
+      { text: "dashed", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to set the border color of an element to red?",
+    choices: [
+      { text: "border: red", correct: false },
+      { text: "border-color: red", correct: true },
+      { text: "border-style: red", correct: false },
+      { text: "border-width: red", correct: false },
+    ],
+  },
+];
+
+const cssQuizQuestions = [
+  {
+    question: "What does CSS stand for?",
+    choices: [
+      { text: "Cascading Style Sheets", correct: true },
+      { text: "Creative Style Systems", correct: false },
+      { text: "Computer Style Standards", correct: false },
+      { text: "Colorful Style Schemes", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is NOT a valid CSS length unit?",
+    choices: [
+      { text: "px", correct: false },
+      { text: "em", correct: false },
+      { text: "in", correct: false },
+      { text: "kg", correct: true },
+    ],
+  },
+  {
+    question: "Which property is used to set the background color of an element in CSS?",
+    choices: [
+      { text: "background-image", correct: false },
+      { text: "background-color", correct: true },
+      { text: "background-repeat", correct: false },
+      { text: "background-position", correct: false },
+    ],
+  },
+  {
+    question: "What is the correct way to set the font-size of an element to 16 pixels?",
+    choices: [
+      { text: "font-size: 16", correct: false },
+      { text: "font-size: 16px", correct: true },
+      { text: "font-size: 16pt", correct: false },
+      { text: "font-size: 16em", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to set the color of text to blue in CSS?",
+    choices: [
+      { text: "color: #0000ff", correct: true },
+      { text: "color: blue", correct: true },
+      { text: "color: rgb(0,0,255)", correct: true },
+      { text: "color: 0000ff", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to set the border style of an element to dotted?",
+    choices: [
+      { text: "border-style: dashed", correct: false },
+      { text: "border-style: dotted", correct: true },
+      { text: "border-style: solid", correct: false },
+      { text: "border-style: double", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to set the border width of an element to 2 pixels?",
+    choices: [
+      { text: "border: 2", correct: false },
+      { text: "border-width: 2px", correct: true },
+      { text: "border-size: 2", correct: false },
+      { text: "border-thickness: 2px", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is NOT a valid border style in CSS?",
+    choices: [
+      { text: "solid", correct: false },
+      { text: "groove", correct: false },
+      { text: "zigzag", correct: true },
+      { text: "dotted", correct: false },
+    ],
+  },
+  {
+    question: "What is the default value for the border-style property in CSS?",
+    choices: [
+      { text: "none", correct: false },
+      { text: "hidden", correct: false },
+      { text: "solid", correct: true },
+      { text: "dashed", correct: false },
+    ],
+  },
+  {
+    question: "Which of the following is a valid way to select all paragraph elements in CSS?",
+    choices: [
+      { text: "p { }", correct: true },
+      { text: ".p { }", correct: false },
+      { text: "#p { }", correct: false },
+      { text: "<p> { }", correct: false },
+    ],
+  },
+];
+
 function checkScore(event) {
   event.preventDefault();
   var questions = 0;
@@ -252,19 +489,35 @@ function checkScore(event) {
       questions = htmlHeadingQuestions;
       console.log(toggle);
       break;
-    default:
+    case "html_overallQuiz":
       questions = htmlOverallQuestions;
-      console.log(questions);
+      console.log(toggle);
+      break;
+    case "css_syntaxQuiz":
+      questions = cssSyntaxQuestions;
+      console.log(toggle);
+      break;
+    case "css_colorsQuiz":
+      questions = cssColorQuestions;
+      console.log(toggle);
+      break;
+    case "css_bordersQuiz":
+      questions = cssBorderQuestions;
+      console.log(toggle);
+      break;
+    default:
+      questions = cssQuizQuestions;
+      console.log(toggle);
       break;
   }
   var score = 0;
-  var htmlQuizForm = document.getElementById(toggle + "-form");
+  var QuizForm = document.getElementById(toggle + "-form");
   for (let i = 0; i < questions.length; i++) {
     var question = questions[i];
 
     for (let j = 0; j < question.choices.length; j++) {
       var choice = question.choices[j];
-      var radio = htmlQuizForm.elements[`q${i + 1}`][j];
+      var radio = QuizForm.elements[`q${i + 1}`][j];
 
       if (radio.checked && choice.correct) {
         score++;
@@ -291,6 +544,12 @@ function showScore(percentage, toggle) {
       case "html_headingsQuiz":
       case "html_overallQuiz":
         display_nav("html_intro");
+        break;
+      case "css_syntaxQuiz":
+      case "css_colorsQuiz":
+      case "css_bordersQuiz":
+      case "css_overallQuiz":
+        display_nav("css_intro");
         break;
     }
   }

@@ -464,7 +464,7 @@
 
             <hr />
           </section>
-          <section class="bodys" id="css_borders" style="display: block">
+          <section class="bodys" id="css_borders" style="display: none">
             <h1 class="top_heading">CSS Border</h1>
             <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
               <a
@@ -684,6 +684,592 @@
             <hr />
 
             <button id="html-quiz ">Take Quiz</button>
+          </section>
+          <section class="bodys" id="css_syntaxQuiz" style="display: none">
+            <h1 class="top_heading">CSS Syntax Quiz</h1>
+            <hr />
+            <p class="intro">Test your Knowledge of CSS Syntax</p>
+            <hr />
+            <div id="css-quiz-container" style="display: block">
+              <form id="css_syntaxQuiz-form">
+                <ol style="list-style-type: none">
+                  <li>
+                    <h3>Question 1</h3>
+                    <p>What does CSS stand for?</p>
+                    <label>
+                      <input type="radio" name="q1" value="a" />
+                      A. Cascading Style Sheets </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="b" />
+                      B. Computer Style Sheets </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="c" />
+                      C. Creative Style Sheets </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="d" />
+                      D. Cursive Style Sheets </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 2</h3>
+                    <p>Which of the following is a valid CSS property?</p>
+                    <label>
+                      <input type="radio" name="q2" value="a" />
+                      A. font-style</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="b" />
+                      B. text-color</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="c" />
+                      C. background-image</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="d" />
+                      D. border-shadow</label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 3</h3>
+                    <p>How do you select an element with an ID in CSS?</p>
+                    <label>
+                      <input type="radio" name="q3" value="a" />
+                      A. #elementID</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="b" />
+                      B. .elementID</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="c" />
+                      C. *elementID </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="d" />
+                      D. &lt;elementID> </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 4</h3>
+                    <p>How do you select all paragraph elements on a page in CSS?</p>
+                    <label>
+                      <input type="radio" name="q4" value="a" />
+                      A. p </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="b" />
+                      B. para </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="c" />
+                      C. p.all </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="d" />
+                      D. paragraph </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 5</h3>
+                    <p>How do you apply CSS to an HTML document?</p>
+                    <label>
+                      <input type="radio" name="q5" value="a" />
+                      A. Using the &LT;style> tag in the &LT;head> section of the HTML document </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="b" />
+                      B. Using the &lt;link> tag in the &lt;body> section of the HTML document </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="c" />
+                      C. Using the &lt;script> tag in the &lt;head> section of the HTML document </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="d" />
+                      D. Using the &lt;css> tag in the &lt;head> section of the HTML document </label
+                    ><br />
+                  </li>
+                </ol>
+                <input
+                  id="css_syntaxQuiz"
+                  type="submit"
+                  value="Submit"
+                  class="quizButton"
+                  onmouseover="changeButtonColor('quizButton')"
+                  onmouseout="changeBackButtonColor('quizButton')"
+                  onclick="checkScore(event)"
+                />
+              </form>
+            </div>
+          </section>
+          <section class="bodys" id="css_colorsQuiz" style="display: none">
+            <h1 class="top_heading">CSS Colors Quiz</h1>
+            <hr />
+            <p class="intro">Test your Knowledge of CSS Colors.</p>
+            <hr />
+            <div id="css-quiz-container" style="display: block">
+              <form id="css_colorsQuiz-form">
+                <ol style="list-style-type: none">
+                  <li>
+                    <h3>Question 1</h3>
+                    <p>Which of the following is NOT a valid color keyword in CSS?</p>
+                    <label>
+                      <input type="radio" name="q1" value="a" />
+                      A. red </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="b" />
+                      B. purple </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="c" />
+                      C. turquoise </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="d" />
+                      D. hamburger </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 2</h3>
+                    <p>What is the hexadecimal value for the color white in CSS?</p>
+                    <label>
+                      <input type="radio" name="q2" value="a" />
+                      A. #FFFFFF </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="b" />
+                      B. #000000</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="c" />
+                      C. #00FF00 </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="c" />
+                      D. #0000FF </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 3</h3>
+                    <p>Which of the following is a valid way to set the background color of an element to blue?</p>
+                    <label>
+                      <input type="radio" name="q3" value="a" />
+                      A. background-color: blue </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="b" />
+                      B. background-color: #0000FF </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="c" />
+                      C. background: blue </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="d" />
+                      D. color: blue </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 4</h3>
+                    <p>What is the RGB value for the color magenta?</p>
+                    <label>
+                      <input type="radio" name="q4" value="a" />
+                      A. rgb(255, 0, 255) </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="b" />
+                      B. rgb(255, 255, 0) </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="c" />
+                      C. rgb(0, 255, 255) </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="d" />
+                      D. rgb(128, 0, 128) </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 5</h3>
+                    <p>Which of the following is a valid way to set the text color of an element to red?</p>
+                    <label>
+                      <input type="radio" name="q5" value="a" />
+                      A. text-color: red </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="b" />
+                      B. color: red </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="c" />
+                      C. font-color: red </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="d" />
+                      D. background-color: red </label
+                    ><br />
+                  </li>
+                </ol>
+                <input
+                  id="css_colorsQuiz"
+                  type="submit"
+                  value="Submit"
+                  class="quizButton"
+                  onmouseover="changeButtonColor('quizButton')"
+                  onmouseout="changeBackButtonColor('quizButton')"
+                  onclick="checkScore(event)"
+                />
+              </form>
+            </div>
+          </section>
+          <section class="bodys" id="css_bordersQuiz" style="display: none">
+            <h1 class="top_heading">CSS Borders Quiz</h1>
+            <hr />
+            <p class="intro">Test your Knowledge of CSS Borders.</p>
+            <hr />
+            <div id="css-quiz-container" style="display: block">
+              <h2>HTML Quiz</h2>
+              <form id="css_bordersQuiz-form">
+                <ol style="list-style-type: none">
+                  <li>
+                    <h3>Question 1</h3>
+                    <p>Which of the following is NOT a valid border style in CSS?</p>
+                    <label>
+                      <input type="radio" name="q1" value="a" />
+                      A. solid</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="b" />
+                      B. groove</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="c" />
+                      C. zigzag </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="c" />
+                      D. dotted </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 2</h3>
+                    <p>What is the default color of a border in CSS?</p>
+                    <label>
+                      <input type="radio" name="q2" value="a" />
+                      A. black</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="b" />
+                      B. white</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="c" />
+                      C. gray</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="d" />
+                      D. transparent</label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 3</h3>
+                    <p>Which of the following is a valid way to set the border width of an element to 5 pixels?</p>
+                    <label>
+                      <input type="radio" name="q3" value="a" />
+                      A. border: 5</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="b" />
+                      B. border-width: 5px </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="c" />
+                      C. border-size: 5</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="d" />
+                      D. border-thickness: 5px</label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 4</h3>
+                    <p>What is the default value for the border-style property in CSS?</p>
+                    <label>
+                      <input type="radio" name="q4" value="a" />
+                      A. none</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="b" />
+                      B. hidden </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="c" />
+                      C. solid </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="d" />
+                      D. dashed </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 5</h3>
+                    <p>Which of the following is a valid way to set the border color of an element to red?</p>
+                    <label>
+                      <input type="radio" name="q5" value="a" />
+                      A. border: red </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="b" />
+                      B. border-color: red </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="c" />
+                      C. border-style: red </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="d" />
+                      D. border-width: red </label
+                    ><br />
+                  </li>
+                </ol>
+                <input
+                  id="css_bordersQuiz"
+                  type="submit"
+                  value="Submit"
+                  class="quizButton"
+                  onmouseover="changeButtonColor('quizButton')"
+                  onmouseout="changeBackButtonColor('quizButton')"
+                  onclick="checkScore(event)"
+                />
+              </form>
+            </div>
+          </section>
+          <section class="bodys" id="css_overallQuiz" style="display: block">
+            <h1 class="top_heading">CSS Final Quiz</h1>
+            <hr />
+            <p class="intro">This is the final test. Check if you have understood everything you learnt until now.</p>
+            <hr />
+            <div id="css-quiz-container" style="display: block">
+              <form id="css_overallQuiz-form">
+                <ol style="list-style-type: none">
+                  <li>
+                    <h3>Question 1</h3>
+                    <p>What does CSS stand for?</p>
+                    <label>
+                      <input type="radio" name="q1" value="a" />
+                      A. Cascading Style Sheets </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="b" />
+                      B. Creative Style Systems</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="c" />
+                      C. Computer Style Standards </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q1" value="d" />
+                      D. Colorful Style Schemes</label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 2</h3>
+                    <p>Which of the following is NOT a valid CSS length unit?</p>
+                    <label>
+                      <input type="radio" name="q2" value="a" />
+                      A. px </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="b" />
+                      B. em </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="c" />
+                      C. in </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q2" value="d" />
+                      D. kg </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 3</h3>
+                    <p>Which property is used to set the background color of an element in CSS?</p>
+                    <label>
+                      <input type="radio" name="q3" value="a" />
+                      A. background-image </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="b" />
+                      B. background-color </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="c" />
+                      C. background-repeat </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q3" value="d" />
+                      D. background-position</label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 4</h3>
+                    <p>What is the correct way to set the font-size of an element to 16 pixels?</p>
+                    <label>
+                      <input type="radio" name="q4" value="a" />
+                      A. font-size: 16 </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="b" />
+                      B. font-size: 16px</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="c" />
+                      C. font-size: 16pt</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q4" value="d" />
+                      D. font-size: 16em </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 5</h3>
+                    <p>Which of the following is a valid way to set the color of text to blue in CSS?</p>
+                    <label>
+                      <input type="radio" name="q5" value="a" />
+                      A. color: #0000ff </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="b" />
+                      B. color: blue </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="c" />
+                      C. color: rgb(0,0,255)</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q5" value="d" />
+                      D. color: 0000ff </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 6</h3>
+                    <p>Which of the following is a valid way to set the border style of an element to dotted?</p>
+                    <label>
+                      <input type="radio" name="q7" value="a" />
+                      A. border-style: dashed </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q7" value="b" />
+                      B. border-style: dotted</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q7" value="c" />
+                      C. border-style: solid </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q7" value="d" />
+                      D. border-style: double </label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 7</h3>
+                    <p>Which of the following is a valid way to set the border width of an element to 2 pixels?</p>
+                    <label>
+                      <input type="radio" name="q6" value="a" />
+                      A. border: 2 </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q6" value="b" />
+                      B. border-width: 2px</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q6" value="c" />
+                      C. border-size: 2</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q6" value="d" />
+                      D. border-thickness: 2px </label
+                    ><br />
+                  </li>
+
+                  <li>
+                    <h3>Question 8</h3>
+                    <p>Which of the following is NOT a valid border style in CSS?</p>
+                    <label>
+                      <input type="radio" name="q8" value="a" />
+                      A. solid </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q8" value="b" />
+                      B. groove</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q8" value="c" />
+                      C. zigzag</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q8" value="d" />
+                      D. dotted</label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 9</h3>
+                    <p>What is the default value for the border-style property in CSS?</p>
+                    <label>
+                      <input type="radio" name="q9" value="a" />
+                      A. none</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q9" value="b" />
+                      B. hidden </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q9" value="c" />
+                      C. solid </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q9" value="d" />
+                      D. dashed</label
+                    ><br />
+                  </li>
+                  <li>
+                    <h3>Question 10</h3>
+                    <p>Which of the following is a valid way to select all paragraph elements in CSS?</p>
+                    <label>
+                      <input type="radio" name="q10" value="a" />
+                      A. p { } </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q10" value="b" />
+                      B. .p { }</label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q10" value="c" />
+                      C. #p { } </label
+                    ><br />
+                    <label>
+                      <input type="radio" name="q10" value="d" />
+                      D. &lt;p> { }</label
+                    ><br />
+                  </li>
+                </ol>
+                <input
+                  id="css_overallQuiz"
+                  type="submit"
+                  value="Submit"
+                  class="quizButton"
+                  onmouseover="changeButtonColor('quizButton')"
+                  onmouseout="changeBackButtonColor('quizButton')"
+                  onclick="checkScore(event)"
+                />
+              </form>
+            </div>
           </section>
         </div>
       </section>
