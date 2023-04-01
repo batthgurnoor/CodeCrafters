@@ -1,9 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Web Development Tutorial</title>
     <link rel="stylesheet" href="homepage.css" />
     <link rel="stylesheet" href="html.css" />
+    <script src="https://kit.fontawesome.com/33813b83ba.js" crossorigin="anonymous"></script>
 
     <script src="main.js"></script>
   </head>
@@ -83,35 +85,57 @@
                 <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
               </div>
               <div style="display: flex; flex-direction: row">
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                  <a href="html_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
-                  <a href="html_course.html#basics "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
-                  <a href="html_course.html#attribures "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
+
+                  <a onclick="display_nav('html_basicsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributesQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headingsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
+                  <a onclick="display_nav('html_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="css_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                  <a href="css_course.html#syntax "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="css_course.html#colors "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                  <a href="css_course.html#backgrounds "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                  <a href="css_course.html#borders "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
+
+                  <a onclick="display_nav('css_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('css_colorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
+
+                  <a onclick="display_nav('css_bordersQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
+                  <a onclick="display_nav('css_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="js_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                  <a href="javascript_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="javascript_course.html#statements "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a
-                  >
-                  <a href="javascript_course.html#syntax "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a
-                  >
-                  <a href="javascript_course.html#variables "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a
-                  >
-                  <a href="javascript_course.html#lets "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
-                  <a href="javascript_course.html#constants "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a
-                  >
+
+                  <a onclick="display_nav('js_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
+                  <a onclick="display_nav('js_variablesQuiz')"
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('js_operatorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators
+                  </a>
+                  <a onclick="display_nav('js_functionsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+                  </a>
+                  <a onclick="display_nav('js_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Final
+                  </a>
                 </div>
               </div>
             </div>
@@ -123,37 +147,38 @@
     <div style="display: flex; flex-direction: row">
       <section class="index_container">
         <h3 class="index_h3">Index</h3>
-        <a class="index_anchor" onclick="display_section('css_intro')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Introduction</a
+        <a class="index_anchor" onclick="display_nav('css_intro')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Introduction</a
         >
-        <a class="index_anchor" onclick="display_section('css_syntax')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Syntax</a
+        <a class="index_anchor" onclick="display_nav('css_syntax')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax</a
         >
-        <a class="index_anchor" onclick="display_section('css_colors')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Colors</a
+        <a class="index_anchor" onclick="display_nav('css_colors')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors</a
         >
-        <a class="index_anchor" onclick="display_section('css_borders')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Border</a
+        <a class="index_anchor" onclick="display_nav('css_borders')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders</a
         >
         <br /><br />
         <h3 class="index_h3">Quizes</h3>
-        <a class="index_anchor" href="html_course.html#intro "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Introduction Quiz</a
+
+        <a class="index_anchor" onclick="display_nav('css_syntaxQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax</a
         >
-        <a class="index_anchor" href="html_course.html#basics "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Basics Quiz</a
+        <a class="index_anchor" onclick="display_nav('css_colorsQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors</a
         >
-        <a class="index_anchor" href="html_course.html#attribures "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Attributes Quiz</a
+        <a class="index_anchor" onclick="display_nav('css_bordersQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders</a
         >
-        <a class="index_anchor" href="html_course.html#headings "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Headings Quiz</a
+        <a class="index_anchor" onclick="display_nav('css_overallQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Final</a
         >
       </section>
 
       <section class="body_container" id="body_container" onclick="check()">
         <div style="display: flex; flex-direction: column">
-          <section class="bodys" id="css_intro" style="display: none">
+          <section class="bodys" id="css_intro" style="display: block">
             <h1 class="top_heading">CSS Introduction</h1>
             <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
               <a
@@ -189,7 +214,6 @@
             </ul>
             <hr />
 
-            <h2 class="text_top_heading">A Simple HTML Document</h2>
             <div class="example">
               <h3 class="example_title">Example</h3>
               <div class="example_content">
@@ -204,7 +228,12 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;padding:25px; <br />
                 &#125;
               </div>
-              <a target="_blank " href="tryit.asp?filename=tryhtml_intro " class="example_button">Try it Yourself &raquo;</a>
+              <a
+                target="_blank "
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_intro "
+                class="example_button"
+                >Try it Yourself &raquo;</a
+              >
             </div>
             <h3>Example Explained</h3>
             <ul>
@@ -233,12 +262,10 @@
               With an external stylesheet file, you can change the look of an entire website by changing just one file!
             </p>
 
-            <div class="note">
+            <div class="example_note">
               <p><strong>Note:</strong> Before starting CSS tutorials, please make sure you are proficient in HTML.</p>
             </div>
             <hr />
-
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="css_syntax" style="display: none">
             <h1 class="top_heading">CSS Syntax</h1>
@@ -260,7 +287,7 @@
             <div id="image_container">
               <img src="cssSyntax.png" style="margin: auto; display: block" />
             </div>
-            <h2 class="text_top_heading">HTML Documents</h2>
+            <h2 class="text_top_heading">Explanation</h2>
             <p>
               <strong>Selector</strong>: Selector indicates the HTML element you want to style. It could be any tag like
               <code class="codespan">h1</code>, <code class="codespan">title</code> etc.
@@ -285,7 +312,12 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown"> padding </span> : 25px; <br />
                 &#125;
               </div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
+              <a
+                class="example_button"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax1"
+                target="_blank"
+                >Try it Yourself</a
+              >
             </div>
 
             <h2 class="text_top_heading">Example Explained</h2>
@@ -302,7 +334,7 @@
               <code class="codespan">padding</code> is a property, and <code class="codespan">25px</code> is the value of the
               property.
             </p>
-            <div class="note">
+            <div class="example_note">
               <p>
                 <strong>Note:</strong> Multiple CSS declarations are separated with semicolons, and declaration blocks are
                 surrounded by curly braces.
@@ -310,7 +342,6 @@
             </div>
 
             <hr />
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="css_colors" style="display: none">
             <h1 class="top_heading">CSS Colors</h1>
@@ -357,7 +388,10 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: brown">color</span>&nbsp;: rgb(255,0,0); <br />
                 &#125;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_values"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -378,7 +412,10 @@
                 <br />
                 &#125;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_values"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -402,7 +439,10 @@
                 <br />
                 &#125;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_values"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -434,7 +474,10 @@
                 <br />
                 &#125;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_values"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -457,7 +500,10 @@
                 <br />
                 &#125;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_values"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -562,7 +608,7 @@
 
               <a
                 target="_blank"
-                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border-style"
                 class="example_button"
                 >Try it Yourself</a
               >
@@ -612,42 +658,6 @@
             </div>
 
             <hr />
-            <h2>CSS border-width</h2>
-            <p>
-              The <code class="codespan">border-width</code> property is used to set the border's width. It is usually set in
-              pixels.<br /><br />
-              You can also use the one of the three pre-defined values, thin, medium or thick to set the width of the
-              border.<br />
-            </p>
-
-            <div class="example">
-              <h3 class="example_title">Example</h3>
-              <div class="example_content">
-                <span style="color: red">p.one</span> &#123; &nbsp;<span style="color: brown"> border-style</span> : solid;
-                <span style="color: brown"> border-width</span> : 6px; &nbsp; &#125;<br />
-                <span style="color: red">p.next</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
-                dotted;<span style="color: brown"> border-width</span> : slim; &nbsp; &#125;<br />
-                <span style="color: red">p.after</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
-                dashed;<span style="color: brown"> border-width</span> : medium; &nbsp; &#125;<br />
-                <span style="color: red">p.last</span> &#123; &nbsp;<span style="color: brown"> border-style</span> :
-                solid;<span style="color: brown"> border-width</span> : thick; &nbsp; &#125;<br />
-              </div>
-              <h3 class="example_title">Result</h3>
-              <div class="example_content">
-                <p style="border-style: solid; text-align: center; border-width: 6px">solid 6px</p>
-                <p style="border-style: dotted; text-align: center; border-width: slim">dotted slim</p>
-                <p style="border-style: dashed; text-align: center; border-width: medium">dashed medium</p>
-                <p style="border-style: solid; text-align: center; border-width: thick">solid thick</p>
-              </div>
-
-              <a
-                target="_blank"
-                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings"
-                class="example_button"
-                >Try it Yourself</a
-              >
-            </div>
-            <hr />
 
             <h2>CSS border-radius</h2>
             <p>
@@ -676,14 +686,12 @@
 
               <a
                 target="_blank"
-                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings"
+                href="https://www.w3schools.com/css/tryit.asp?filename=trycss_border_round"
                 class="example_button"
                 >Try it Yourself</a
               >
             </div>
             <hr />
-
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="css_syntaxQuiz" style="display: none">
             <h1 class="top_heading">CSS Syntax Quiz</h1>
@@ -1049,7 +1057,7 @@
               </form>
             </div>
           </section>
-          <section class="bodys" id="css_overallQuiz" style="display: block">
+          <section class="bodys" id="css_overallQuiz" style="display: none">
             <h1 class="top_heading">CSS Final Quiz</h1>
             <hr />
             <p class="intro">This is the final test. Check if you have understood everything you learnt until now.</p>
@@ -1275,7 +1283,10 @@
       </section>
     </div>
     <footer>
-      <p>&copy; 2023 Web Tutorial</p>
+      <p>
+        &copy; 2023 Web Tutorial<br />Developed at University of Fraser Valley<br />By Gurnoor Singh, Anmol Singh & Sunmehak
+        Singh
+      </p>
     </footer>
   </body>
 </html>

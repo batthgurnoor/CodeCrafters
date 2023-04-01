@@ -85,35 +85,57 @@
                 <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
               </div>
               <div style="display: flex; flex-direction: row">
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                  <a href="html_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
-                  <a href="html_course.html#basics "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
-                  <a href="html_course.html#attribures "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
+
+                  <a onclick="display_nav('html_basicsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributesQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headingsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
+                  <a onclick="display_nav('html_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="css_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                  <a href="css_course.html#syntax "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="css_course.html#colors "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                  <a href="css_course.html#backgrounds "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                  <a href="css_course.html#borders "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
+
+                  <a onclick="display_nav('css_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('css_colorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
+
+                  <a onclick="display_nav('css_bordersQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
+                  <a onclick="display_nav('css_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="js_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                  <a href="javascript_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="javascript_course.html#statements "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a
-                  >
-                  <a href="javascript_course.html#syntax "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a
-                  >
-                  <a href="javascript_course.html#variables "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a
-                  >
-                  <a href="javascript_course.html#lets "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
-                  <a href="javascript_course.html#constants "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a
-                  >
+
+                  <a onclick="display_nav('js_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
+                  <a onclick="display_nav('js_variablesQuiz')"
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('js_operatorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators
+                  </a>
+                  <a onclick="display_nav('js_functionsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+                  </a>
+                  <a onclick="display_nav('js_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Final
+                  </a>
                 </div>
               </div>
             </div>
@@ -125,47 +147,46 @@
     <div style="display: flex; flex-direction: row">
       <section class="index_container">
         <h3 class="index_h3">Index</h3>
-        <a class="index_anchor" onclick="display_section('html_intro')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Introduction</a
+        <a class="index_anchor" onclick="display_nav('html_intro')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Introduction</a
         >
-        <a class="index_anchor" onclick="display_section('html_basics')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics</a
+        <a class="index_anchor" onclick="display_nav('html_basics')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Basics</a
         >
-        <a class="index_anchor" onclick="display_section('html_attributes')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes</a
+        <a class="index_anchor" onclick="display_nav('html_attributes')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Attributes</a
         >
-        <a class="index_anchor" onclick="display_section('html_headings')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings</a
+        <a class="index_anchor" onclick="display_nav('html_headings')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Headings</a
         >
         <br /><br />
         <h3 class="index_h3">Quizes</h3>
-        <a class="index_anchor" href="html_course.html#intro "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Introduction Quiz</a
+        <a class="index_anchor" onclick="display_nav('html_basicsQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Basics</a
         >
-        <a class="index_anchor" href="html_course.html#basics "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Basics Quiz</a
+        <a class="index_anchor" onclick="display_nav('html_attributesQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Attributes</a
         >
-        <a class="index_anchor" href="html_course.html#attribures "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Attributes Quiz</a
+        <a class="index_anchor" onclick="display_nav('html_headingsQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Headings</a
         >
-        <a class="index_anchor" href="html_course.html#headings "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Headings Quiz</a
+        <a class="index_anchor" onclick="display_nav('html_overallQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;HTML Final</a
         >
       </section>
-
       <section class="body_container" id="body_container" onclick="check()">
         <div style="display: flex; flex-direction: column">
-          <section class="bodys" id="html_intro" style="display: block">
+          <section class="bodys" id="html_intro" style="display: none">
             <h1 class="top_heading">HTML Introduction</h1>
             <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
               <a
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="htmlSection_previous('html_intro')"
+                onclick="display_nav('html_intro')"
                 >&#10094; Previous</a
               >
-              <a class="example_button" id="button_next" style="justify-self: right" onclick="htmlSection_next('html_intro')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('html_intro')"
                 >Next &#10095;</a
               >
             </div>
@@ -198,7 +219,12 @@
                 &lt;body&gt;<br /><br />&lt;h1&gt;My First Heading&lt;/h1&gt;<br />&lt;p&gt;My first paragraph.&lt;/p&gt;<br /><br />
                 &lt;/body&gt;<br />&lt;/html&gt;
               </div>
-              <a target="_blank " href="tryit.asp?filename=tryhtml_intro " class="example_button">Try it Yourself &raquo;</a>
+              <a
+                target="_blank "
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro "
+                class="example_button"
+                >Try it Yourself &raquo;</a
+              >
             </div>
             <h3>Example Explained</h3>
             <ul>
@@ -269,7 +295,7 @@
               </tr>
             </table>
 
-            <div class="note">
+            <div class="example_note">
               <p>
                 <strong>Note:</strong> Some HTML elements have no content (like the &lt;br&gt; element). These elements are
                 called empty elements. Empty elements do not have an end tag!
@@ -308,7 +334,8 @@
               </div>
               &lt;/html&gt;
             </div>
-            <div class="note">
+            <br />
+            <div class="example_note">
               <p>
                 <strong>Note:</strong> The content inside the <code class="codespan">&lt;body&gt;</code> section (the white
                 area above) will be displayed in a browser. The content inside the &lt;title&gt; element will be shown in the
@@ -316,8 +343,6 @@
               </p>
             </div>
             <hr />
-
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="html_basics" style="display: none">
             <h1 class="top_heading">HTML Basic Examples</h1>
@@ -326,20 +351,15 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="htmlSection_previous('html_basics')"
+                onclick="display_nav('html_intro')"
                 >&#10094; Previous</a
               >
-              <a
-                class="example_button"
-                id="button_next"
-                style="justify-self: right"
-                onclick="htmlSection_next('html_basics')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('html_attributes')"
                 >Next &#10095;</a
               >
             </div>
             <hr />
             <p class="intro">In this chapter we will show some basic HTML examples.</p>
-            <p class="intro">Don't worry if we use tags you have not learned about yet.</p>
             <hr />
 
             <h2 class="text_top_heading">HTML Documents</h2>
@@ -361,7 +381,10 @@
                 &lt;!DOCTYPE html&gt;<br />&lt;html&gt;<br />&lt;body&gt;<br /><br />&lt;h1&gt;My First Heading&lt;/h1&gt;<br />&lt;p&gt;My
                 first paragraph.&lt;/p&gt;<br /><br />&lt;/body&gt;<br />&lt;/html&gt;
               </div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank"
+              <a
+                class="example_button"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document"
+                target="_blank"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -396,7 +419,10 @@
                 &lt;h2&gt;This is heading 2&lt;/h2&gt;<br />
                 &lt;h3&gt;This is heading 3&lt;/h3&gt;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_basic_headings" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_headings"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -410,7 +436,10 @@
                 &lt;p&gt;This is a paragraph.&lt;/p&gt;<br />
                 &lt;p&gt;This is another paragraph.&lt;/p&gt;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_basic_paragraphs" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_paragraphs"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -421,7 +450,10 @@
             <div class="example">
               <h3 class="example_title">Example</h3>
               <div class="example_content">&lt;a href=&quot;https://www.w3schools.com&quot;&gt;This is a link&lt;/a&gt;</div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_basic_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_link"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -442,7 +474,10 @@
                 &lt;img src=&quot;w3schools.jpg&quot; alt=&quot;W3Schools.com&quot; width=&quot;104&quot;
                 height=&quot;142&quot;&gt;
               </div>
-              <a target="_blank" title="Try it yourself" href="tryit.asp?filename=tryhtml_basic_img" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_img"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -463,7 +498,6 @@
             </p>
 
             <hr />
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="html_attributes" style="display: none">
             <h1 class="top_heading">HTML Attributes</h1>
@@ -472,14 +506,10 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="htmlSection_previous('html_attributes')"
+                onclick="display_nav('html_basics')"
                 >&#10094; Previous</a
               >
-              <a
-                class="example_button"
-                id="button_next"
-                style="justify-self: right"
-                onclick="htmlSection_next('html_attributes')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('html_headings')"
                 >Next &#10095;</a
               >
             </div>
@@ -505,11 +535,13 @@
               <div class="example_content">
                 &lt;a href=&quot;https://www.w3schools.com&quot;&gt;Visit W3Schools&lt;/a&gt;
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_link"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
-            <p>You will learn more about links in our <a href="html_links.asp">HTML Links chapter</a>.</p>
             <hr />
             <h2 class="text_top_heading">The src Attribute</h2>
             <p>
@@ -519,7 +551,10 @@
             <div class="example">
               <h3 class="example_title">Example</h3>
               <div class="example_content">&lt;img src=&quot;img_girl.jpg&quot;&gt;</div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_attributes_img_src" target="_blank"
+              <a
+                class="example_button"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_img_src"
+                target="_blank"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -553,7 +588,10 @@
             <div class="example">
               <h3 class="example_title">Example</h3>
               <div class="example_content">&lt;p style=&quot;color:red;&quot;&gt;This is a red paragraph.&lt;/p&gt;</div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_attributes_style" target="_blank"
+              <a
+                class="example_button"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_style"
+                target="_blank"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -565,7 +603,10 @@
             <div class="example">
               <h3 class="example_title">Example</h3>
               <div class="example_content">&lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;</div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_attributes_title" target="_blank"
+              <a
+                class="example_button"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_title"
+                target="_blank"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -583,7 +624,10 @@
             <div class="example">
               <h3 class="example_title">Example</h3>
               <div class="example_content">&lt;p title=&quot;John 'ShotGun' Nelson&quot;&gt;</div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_attributes_single_double" target="_blank"
+              <a
+                class="example_button"
+                href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_attributes_single_double"
+                target="_blank"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -619,21 +663,17 @@
               <li>The <code class="codespan">title</code> attribute defines some extra information about an element</li>
             </ul>
           </section>
-          <section class="bodys" id="html_headings" style="display: none">
+          <section class="bodys" id="html_headings" style="display: block">
             <h1 class="top_heading">HTML Headings</h1>
             <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
               <a
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="htmlSection_previous('html_headings')"
+                onclick="display_nav('html_attributes')"
                 >&#10094; Previous</a
               >
-              <a
-                class="example_button"
-                id="button_next"
-                style="justify-self: right"
-                onclick="htmlSection_next('html_headings')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('html_headings')"
                 >Next &#10095;</a
               >
             </div>
@@ -686,14 +726,12 @@
               >
             </div>
 
-            <div class="w3-panel w3-note">
+            <div class="example_note">
               <p>
                 <strong>Note:</strong> Browsers automatically add some white space (a margin) before and after a heading.
               </p>
             </div>
             <hr />
-
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="html_basicsQuiz" style="display: none">
             <h1 class="top_heading">HTML Basics Quiz</h1>
@@ -1268,9 +1306,10 @@
     </div>
 
     <footer>
-      <p>&copy; 2023 Web Tutorial</p>
+      <p>
+        &copy; 2023 Web Tutorial<br />Developed at University of Fraser Valley<br />By Gurnoor Singh, Anmol Singh & Sunmehak
+        Singh
+      </p>
     </footer>
-
-    <script src="main.js "></script>
   </body>
 </html>

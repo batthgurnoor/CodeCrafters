@@ -86,35 +86,57 @@
                 <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
               </div>
               <div style="display: flex; flex-direction: row">
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                  <a href="html_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
-                  <a href="html_course.html#basics "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
-                  <a href="html_course.html#attribures "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
+
+                  <a onclick="display_nav('html_basicsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributesQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headingsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
+                  <a onclick="display_nav('html_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="css_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                  <a href="css_course.html#syntax "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="css_course.html#colors "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                  <a href="css_course.html#backgrounds "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                  <a href="css_course.html#borders "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
+
+                  <a onclick="display_nav('css_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('css_colorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
+
+                  <a onclick="display_nav('css_bordersQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
+                  <a onclick="display_nav('css_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="js_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                  <a href="javascript_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="javascript_course.html#statements "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a
-                  >
-                  <a href="javascript_course.html#syntax "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a
-                  >
-                  <a href="javascript_course.html#variables "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a
-                  >
-                  <a href="javascript_course.html#lets "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
-                  <a href="javascript_course.html#constants "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a
-                  >
+
+                  <a onclick="display_nav('js_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
+                  <a onclick="display_nav('js_variablesQuiz')"
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('js_operatorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators
+                  </a>
+                  <a onclick="display_nav('js_functionsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+                  </a>
+                  <a onclick="display_nav('js_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Final
+                  </a>
                 </div>
               </div>
             </div>
@@ -287,9 +309,9 @@
                 <h3>CSS Example:</h3>
               <div class="course-card-code-inContainer" ">
                 <span class="cssselectorcolor" style="color:brown">
-            body 
-            <span class="cssdelimitercolor" style="color:black">{</span>
-            <span class="csspropertycolor" style="color:red"><br>
+              body 
+              <span class="cssdelimitercolor" style="color:black">{</span>
+              <span class="csspropertycolor" style="color:red"><br>
                 &nbsp; background-color
               <span class="csspropertyvaluecolor" style="color:mediumblue">
                 <span class="cssdelimitercolor" style="color:black">:</span>
@@ -474,9 +496,12 @@
           C 60 8, 70 22, 100 15
           L 100 10, -10 10 Z"></path>
       </svg>
-      <p>&copy; 2023 Web Tutorial</p>
+     
+      <p>
+        &copy; 2023 Web Tutorial<br />Developed at University of Fraser Valley<br />By Gurnoor Singh, Anmol Singh & Sunmehak
+        Singh
+      </p>
     </footer>
-
-    <script src="main.js"></script>
+    
   </body>
 </html>

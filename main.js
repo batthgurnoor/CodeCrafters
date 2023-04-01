@@ -915,56 +915,6 @@ function check() {
   }
 }
 
-function htmlSection_previous(toggle) {
-  document.getElementById(toggle).style.display = "none";
-  if (toggle === "html_intro") {
-    document.getElementById("html_headings").style.display = "block";
-  } else if (toggle === "html_basics") {
-    document.getElementById("html_intro").style.display = "block";
-  } else if (toggle === "html_attributes") {
-    document.getElementById("html_basics").style.display = "block";
-  } else {
-    document.getElementById("html_attributes").style.display = "block";
-  }
-}
-
-function cssSection_previous(toggle) {
-  document.getElementById(toggle).style.display = "none";
-  if (toggle === "css_intro") {
-    document.getElementById("css_borders").style.display = "block";
-  } else if (toggle === "css_syntax") {
-    document.getElementById("css_intro").style.display = "block";
-  } else if (toggle === "css_colors") {
-    document.getElementById("css_syntax").style.display = "block";
-  } else {
-    document.getElementById("css_colors").style.display = "block";
-  }
-}
-function htmlSection_next(toggle) {
-  document.getElementById(toggle).style.display = "none";
-  if (toggle === "html_intro") {
-    document.getElementById("html_basics").style.display = "block";
-  } else if (toggle === "html_basics") {
-    document.getElementById("html_attributes").style.display = "block";
-  } else if (toggle === "html_attributes") {
-    document.getElementById("html_headings").style.display = "block";
-  } else {
-    document.getElementById("html_intro").style.display = "block";
-  }
-}
-function cssSection_next(toggle) {
-  document.getElementById(toggle).style.display = "none";
-  if (toggle === "css_intro") {
-    document.getElementById("css_syntax").style.display = "block";
-  } else if (toggle === "css_syntax") {
-    document.getElementById("css_colors").style.display = "block";
-  } else if (toggle === "css_colors") {
-    document.getElementById("css_borders").style.display = "block";
-  } else {
-    document.getElementById("css_intro").style.display = "block";
-  }
-}
-
 function display_section(toggle) {
   var list = document.getElementsByClassName("bodys");
   for (let item of list) {
@@ -978,6 +928,7 @@ function display_nav(toggle) {
   const page = toggle.split("_");
   window.location.href = page[0] + "_course.html#";
   display_section(toggle);
+  console.log("here");
 }
 
 function changeButtonColor() {

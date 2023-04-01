@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Web Development Tutorial</title>
     <link rel="stylesheet" href="homepage.css" />
     <link rel="stylesheet" href="html.css" />
+    <script src="https://kit.fontawesome.com/33813b83ba.js" crossorigin="anonymous"></script>
 
     <script src="main.js"></script>
   </head>
@@ -84,35 +84,57 @@
                 <h1 class="dropdown-heading-main"><i class="fa-solid fa-poo"></i>&nbsp;Exercises</h1>
               </div>
               <div style="display: flex; flex-direction: row">
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="html_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-html5"></i>&nbsp;HTML</h2>
-                  <a href="html_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 1</a>
-                  <a href="html_course.html#basics "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 2</a>
-                  <a href="html_course.html#attribures "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; Quiz 3</a>
+
+                  <a onclick="display_nav('html_basicsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Basics
+                  </a>
+                  <a onclick="display_nav('html_attributesQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Attributes
+                  </a>
+                  <a onclick="display_nav('html_headingsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Headings
+                  </a>
+                  <a onclick="display_nav('html_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; HTML Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="css_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-css3-alt"></i>&nbsp;CSS</h2>
-                  <a href="css_course.html#syntax "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="css_course.html#colors "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a>
-                  <a href="css_course.html#backgrounds "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a>
-                  <a href="css_course.html#borders "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a>
+
+                  <a onclick="display_nav('css_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Syntax
+                  </a>
+                  <a onclick="display_nav('css_colorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Colors
+                  </a>
+
+                  <a onclick="display_nav('css_bordersQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;CSS Borders
+                  </a>
+                  <a onclick="display_nav('css_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; CSS Final
+                  </a>
                 </div>
-                <div class="topic-container" style="flex: 33%">
+                <div class="topic-container" id="js_nav" style="flex: 33%">
                   <h2 class="dropdown-heading"><i class="fa-brands fa-square-js"></i>&nbsp;JavaScript</h2>
-                  <a href="javascript_course.html#intro "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 1</a>
-                  <a href="javascript_course.html#statements "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 2</a
-                  >
-                  <a href="javascript_course.html#syntax "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 3</a
-                  >
-                  <a href="javascript_course.html#variables "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 4</a
-                  >
-                  <a href="javascript_course.html#lets "><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 5</a>
-                  <a href="javascript_course.html#constants "
-                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;Quiz 6</a
-                  >
+
+                  <a onclick="display_nav('js_syntaxQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax
+                  </a>
+                  <a onclick="display_nav('js_variablesQuiz')"
+                    ><i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables
+                  </a>
+                  <a onclick="display_nav('js_operatorsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators
+                  </a>
+                  <a onclick="display_nav('js_functionsQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+                  </a>
+                  <a onclick="display_nav('js_overallQuiz')">
+                    <i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Final
+                  </a>
                 </div>
               </div>
             </div>
@@ -124,59 +146,50 @@
     <div style="display: flex; flex-direction: row">
       <section class="index_container">
         <h3 class="index_h3">Index</h3>
-        <a class="index_anchor" onclick="display_section('js_intro')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Introduction</a
+        <a class="index_anchor" onclick="display_nav('js_syntax')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax</a
         >
-        <a class="index_anchor" onclick="display_section('js_syntax')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Syntax</a
+        <a class="index_anchor" onclick="display_nav('js_variables')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables</a
         >
-        <a class="index_anchor" onclick="display_section('js_variables')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Variables</a
+        <a class="index_anchor" onclick="display_nav('js_operators')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators</a
         >
-        <a class="index_anchor" onclick="display_section('js_operators')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Operators</a
-        >
-        <a class="index_anchor" onclick="display_section('js_functions')"
-          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp; JS Functions</a
-        >
+        <a class="index_anchor" onclick="display_nav('js_functions')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+        </a>
         <br /><br />
-        <h3 class="index_h3">Quizes</h3>
-        <a class="index_anchor" href="html_course.html#intro "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Introduction Quiz</a
+        <h3 class="index_h3"><i class="fa-solid fa-face-scream"></i>Quizes</h3>
+        <a class="index_anchor" onclick="display_nav('js_syntaxQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Syntax</a
         >
-        <a class="index_anchor" href="html_course.html#basics "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Basics Quiz</a
+        <a class="index_anchor" onclick="display_nav('js_variablesQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Variables</a
         >
-        <a class="index_anchor" href="html_course.html#attribures "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Attributes Quiz</a
+        <a class="index_anchor" onclick="display_nav('js_operatorsQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Operators</a
         >
-        <a class="index_anchor" href="html_course.html#headings "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Headings Quiz</a
-        >
-        <a class="index_anchor" href="html_course.html#basics "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Basics Quiz</a
-        >
-        <a class="index_anchor" href="html_course.html#attribures "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Attributes Quiz</a
-        >
-        <a class="index_anchor" href="html_course.html#headings "
-          >&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;HTML Headings Quiz</a
-        >
+        <a class="index_anchor" onclick="display_nav('js_functionsQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Functions
+        </a>
+        <a class="index_anchor" onclick="display_nav('js_overallQuiz')"
+          >&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;&nbsp;&nbsp;JS Final
+        </a>
       </section>
 
       <section class="body_container" id="body_container" onclick="check()">
         <div style="display: flex; flex-direction: column">
-          <section class="bodys" id="js_intro" style="display: none">
+          <section class="bodys" id="js_intro" style="display: block">
             <h1 class="top_heading">JS Introduction</h1>
             <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
               <a
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="jsSection_previous('js_intro')"
+                onclick="display_nav('js_functions')"
                 >&#10094; Previous</a
               >
-              <a class="example_button" id="button_next" style="justify-self: right" onclick="jsSection_next('js_intro')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('js_syntax')"
                 >Next &#10095;</a
               >
             </div>
@@ -245,20 +258,14 @@
                 <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
               </div>
             </div>
-
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="js_syntax" style="display: none">
             <h1 class="top_heading">JavaScript Syntax</h1>
             <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
-              <a
-                class="example_button"
-                id="button_previous"
-                style="display: inline-block"
-                onclick="cssSection_previous('js_syntax')"
+              <a class="example_button" id="button_previous" style="display: inline-block" onclick="display_nav('js_intro')"
                 >&#10094; Previous</a
               >
-              <a class="example_button" id="button_next" style="justify-self: right" onclick="cssSection_next('js_syntax')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('js_variables')"
                 >Next &#10095;</a
               >
             </div>
@@ -287,7 +294,9 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;<span> JavaScript Code</span><br />
                 <<span style="color: red">/script</span>><br />
               </div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
+              <a class="example_button" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto" target="_blank"
+                >Try it Yourself</a
+              >
             </div>
             <hr />
 
@@ -338,26 +347,22 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;<span> //--&gt;</span><br />
                 <<span style="color: red">/script</span>><br />
               </div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
+              <a
+                class="example_button"
+                href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comments2"
+                target="_blank"
+                >Try it Yourself</a
+              >
             </div>
             <hr />
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="js_variables" style="display: none">
             <h1 class="top_heading">JavaScript Variables</h1>
             <div class="preview_buttons" style="display: grid; grid-template-columns: auto auto">
-              <a
-                class="example_button"
-                id="button_previous"
-                style="display: inline-block"
-                onclick="cssSection_previous('js_variables')"
+              <a class="example_button" id="button_previous" style="display: inline-block" onclick="display_nav('js_syntax')"
                 >&#10094; Previous</a
               >
-              <a
-                class="example_button"
-                id="button_next"
-                style="justify-self: right"
-                onclick="cssSection_next('js_variables')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('js_operators')"
                 >Next &#10095;</a
               >
             </div>
@@ -390,7 +395,10 @@
                 <span style="color: red">var</span>&nbsp;x = <span style="color: brown">1</span>;<br />
                 <span style="color: red">var</span>&nbsp;y = <span style="color: brown">5</span>;<br />
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_variables"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -404,7 +412,10 @@
                 <span style="color: red">const</span>&nbsp;value1 = <span style="color: brown">1</span>;<br />
                 <span style="color: red">const</span>&nbsp;value2 = <span style="color: brown">5</span>;<br />
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_variables_total"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -418,7 +429,10 @@
                 <span style="color: red">let</span>&nbsp;a = <span style="color: brown">1</span>;<br />
                 <span style="color: red">let</span>&nbsp;b = <span style="color: brown">5</span>;<br />
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_variables_let"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -550,7 +564,6 @@
             </div>
 
             <hr />
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="js_operators" style="display: none">
             <h1 class="top_heading">JavaScript Operators</h1>
@@ -559,14 +572,10 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="cssSection_previous('js_operators')"
+                onclick="display_nav('js_variables')"
                 >&#10094; Previous</a
               >
-              <a
-                class="example_button"
-                id="button_next"
-                style="justify-self: right"
-                onclick="cssSection_next('js_operators')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('js_functions')"
                 >Next &#10095;</a
               >
             </div>
@@ -840,8 +849,6 @@
               </table>
             </div>
             <hr />
-
-            <button id="html-quiz ">Take Quiz</button>
           </section>
           <section class="bodys" id="js_functions" style="display: none">
             <h1 class="top_heading">JavaScript Functions</h1>
@@ -850,14 +857,10 @@
                 class="example_button"
                 id="button_previous"
                 style="display: inline-block"
-                onclick="cssSection_previous('js_functions')"
+                onclick="display_nav('js_operators')"
                 >&#10094; Previous</a
               >
-              <a
-                class="example_button"
-                id="button_next"
-                style="justify-self: right"
-                onclick="cssSection_next('js_functions')"
+              <a class="example_button" id="button_next" style="justify-self: right" onclick="display_nav('js_intro')"
                 >Next &#10095;</a
               >
             </div>
@@ -892,7 +895,6 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
                 <<span style="color: red">/script</span>><br />
               </div>
-              <a class="example_button" href="tryit.asp?filename=tryhtml_basic_document" target="_blank">Try it Yourself</a>
             </div>
 
             <hr />
@@ -914,7 +916,10 @@
                 }<br /><br />
                 document.getElementById(<span style="color: brown">"this"</span>).innerHTML = addition(5,6);
               </div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_farenheit_to_celsius"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
@@ -938,16 +943,17 @@
               </div>
               <h3 class="example_title">Result</h3>
               <div class="example_content"><span style="color: red">i</span> = 11</div>
-              <a target="_blank" href="tryit.asp?filename=tryhtml_attributes_link" class="example_button"
+              <a
+                target="_blank"
+                href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_return"
+                class="example_button"
                 >Try it Yourself &raquo;</a
               >
             </div>
 
             <hr />
-
-            <button id="html-quiz ">Take Quiz</button>
           </section>
-          <section class="bodys" id="js_syntaxQuiz" style="display: block">
+          <section class="bodys" id="js_syntaxQuiz" style="display: none">
             <h1 class="top_heading">JavaScript Syntax Quiz</h1>
             <hr />
             <p class="intro">Test your Knowledge of JS Syntax</p>
@@ -1665,7 +1671,10 @@
       </section>
     </div>
     <footer>
-      <p>&copy; 2023 Web Tutorial</p>
+      <p>
+        &copy; 2023 Web Tutorial<br />Developed at University of Fraser Valley<br />By Gurnoor Singh, Anmol Singh & Sunmehak
+        Singh
+      </p>
     </footer>
   </body>
 </html>
