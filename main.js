@@ -1,5 +1,4 @@
-/* // HTML quiz */ const htmlOverallQuestions = [
-  {
+/* // HTML quiz */ const htmlOverallQuestions = [  {
     question: "Which HTML attribute is used to specify the URL of the page that the hyperlink goes to?",
     choices: [
       { text: "href", correct: true },
@@ -852,30 +851,6 @@ function showScore(percentage, toggle) {
   }
 }
 
-/* htmlQuizForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  let score = 0;
-
-  for (let i = 0; i < htmlOverallQuestions.length; i++) {
-    const question = htmlOverallQuestions[i];
-
-    for (let j = 0; j < question.choices.length; j++) {
-      const choice = question.choices[j];
-      const radio = htmlQuizForm.elements[`q${i + 1}`][j];
-
-      if (radio.checked && choice.correct) {
-        score++;
-        break;
-      }
-    }
-  }
-
-  const percentage = Math.round((score / htmlOverallQuestions.length) * 100);
-  htmlQuizScore.textContent = `You scored ${score} out of ${htmlOverallQuestions.length}, which is ${percentage}%.`;
-  htmlQuizScore.style.display = "block";
-}); */
-
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -931,8 +906,8 @@ function display_nav(toggle) {
   console.log("here");
 }
 
-function changeButtonColor() {
-  var buttons = document.getElementsByClassName("quizButton");
+function changeButtonColor(toggle) {
+  var buttons = document.getElementsByClassName(toggle);
   for (let button of buttons) {
     button.style.backgroundColor = "#38a7af";
     button.style.border = "2px solid #38a7af";
